@@ -1,0 +1,303 @@
+@use "colors" as *;
+
+@font-face {
+  font-family: MotivaSans;
+  src: url("/Resources/motiva-sans/MotivaSansRegular.woff.ttf");
+}
+
+@font-face {
+  font-family: MotivaSansBold;
+  src: url("/Resources/motiva-sans/MotivaSansBold.woff.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: MotivaSansExtraBold;
+  src: url("/Resources/motiva-sans/MotivaSansExtraBold.ttf");
+  font-weight: 800;
+}
+@font-face {
+  font-family: MotivaSansMedium;
+  src: url("/Resources/motiva-sans/MotivaSansMedium.woff.ttf");
+  font-weight: 500;
+}
+
+@mixin breakpoint($num) {
+  @media (min-width: $num) {
+    @content;
+  }
+}
+@mixin max-breakpoint($num) {
+  @media (max-width: $num) {
+    @content;
+  }
+}
+@mixin big-mobile {
+  @media (min-width: 560px) {
+    @content;
+  }
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  font-family: MotivaSans;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+section {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.75rem;
+}
+p {
+  font-size: 1.25rem;
+}
+
+.btn {
+  border-radius: 4px;
+  font-size: 1.25rem;
+  font-family: MotivaSansMedium;
+  padding: 10px 77px;
+  margin-bottom: 20px;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+.btn-border {
+  border: solid 2px;
+}
+
+nav {
+  background: $main-gradient2;
+  #phoneIcon {
+    margin-left: 1rem;
+  }
+  .navbar-brand {
+    margin-right: 0;
+    max-width: 50%;
+  }
+  .navbar-toggler {
+    color: $white;
+    padding-left: 0;
+  }
+}
+.secondNav {
+  background: $main-gradient3;
+  height: 30px;
+}
+
+#prMsg {
+  background: $main-gradient;
+  color: $white;
+  h1 {
+    font-size: 2.5rem;
+    letter-spacing: -0.8px;
+    padding: 4.25rem 1.88rem;
+    span {
+      display: block;
+      font-family: MotivaSansExtraBold;
+    }
+  }
+
+  .start-btns {
+    padding-bottom: 72px;
+    #btnStartOne {
+      background-color: $black;
+      color: $white;
+    }
+  }
+}
+
+.product-description {
+  margin-bottom: 30px;
+  &_header {
+    text-align: center;
+    margin-top: 60px;
+
+    h2 {
+      font-size: 32px;
+      font-family: MotivaSansExtraBold;
+      span {
+        display: block;
+        color: $main-pink;
+      }
+    }
+    p {
+      font-size: 20px;
+      margin-top: 1.5rem;
+      margin-bottom: 1.7rem;
+    }
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+    }
+  }
+  .pd-btns {
+    margin-top: 2.5rem;
+    margin-bottom: 60px;
+    #pd-btn-one {
+      background-color: $main-pink;
+      color: $white;
+    }
+    #pd-btn-two {
+      color: $main-pink;
+      border-color: $main-pink;
+    }
+  }
+
+  &_items {
+    .item {
+      margin-left: 45px;
+      margin-right: 45px;
+      overflow: hidden;
+      h3 {
+        font-size: 20px;
+        font-family: MotivaSansBold;
+        margin-bottom: 0;
+        @include big-mobile {
+          font-size: 28px;
+        }
+        svg#Icon_kopia_10 {
+          width: 30 !important;
+        }
+      }
+      p {
+        font-size: 16px;
+        letter-spacing: -0.4px;
+        @include big-mobile {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+.calls {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 30px;
+  &_header {
+    font-family: MotivaSansExtraBold;
+    position: relative;
+    background-color: $main-light-blue;
+    padding: 48px 30px 62px 48px;
+    text-align: right;
+
+    img {
+      height: 251px;
+      position: absolute;
+      left: 0;
+      top: -0.75rem;
+      background: transparent;
+    }
+    span {
+      display: block;
+      color: $white;
+    }
+  }
+  &_btn {
+    padding-top: 20px;
+    padding-bottom: 36px;
+    background-color: #d6f0ff;
+    .btn {
+      background-color: $main-light-blue;
+      color: $white;
+      width: 426px;
+    }
+  }
+  &_queue {
+    background-color: #d6f0ff;
+    position: relative;
+    p {
+      line-height: 4rem;
+      max-height: 24rem;
+      overflow: hidden;
+      svg {
+        margin-right: 0.75rem;
+        margin-left: 1rem;
+      }
+    }
+    .features-p {
+      text-align: center;
+      color: $main-light-blue;
+      font-family: MotivaSansMedium;
+      font-size: 1.25rem;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      height: 130px;
+      bottom: -50px;
+      right: 0;
+      left: 0;
+      background-color: #d6f0ff;
+      transform: skewY(4deg);
+      -webkit-transform: skewY(4deg);
+      -moz-transform: skewY(4deg);
+      -ms-transform: skewY(4deg);
+      z-index: -1;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 150px;
+      bottom: -80px;
+      right: 0;
+      left: 0;
+      background-color: #f2f2f2;
+      z-index: -1;
+    }
+  }
+}
+
+.service {
+  background-color: #f2f2f2;
+  margin-top: 1.5rem;
+  &_header {
+    padding-top: 2rem;
+    text-align: center;
+    h3 {
+      font-family: MotivaSansExtraBold;
+      span {
+        display: block;
+        color: $main-lighter-blue;
+      }
+    }
+
+    p {
+      margin-bottom: 1rem;
+      text-align: center;
+      letter-spacing: -0.4px;
+    }
+  }
+}
+
+.centered-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/*.truncate {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  word-break: var(--word-break, "none");
+  overflow: hidden;
+  hyphens: none;
+}*/
