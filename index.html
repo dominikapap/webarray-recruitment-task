@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebArray</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid justify-items-between">
+            <a href="tel:+000000000" id="phoneIcon"><svg xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+                    <image id="call" width="24" height="24"
+                        xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAbBJREFUSEutlj8oRVEcx98rm8TgT8piMGFTKEWZlBWLhVKKQTJYLFImyeBPskhKMpv0kgEZlDAwmAnpTchwfb5y63S659x7332nPt13/vy+33fP73fOe/kgCHpyudwWNIHZPunswrw1nqqbx+COiFZPVCdzV6lUjcUyeKVf6xEYZW4/i8ETwc0egVnmVrMYXBKsbXC1DSamshjsEaxtcDXlqD2Lgapk2SMQMFcJqqrUTUnuIurCE/nBXAP8pFYnQAYVPN+g2iEwxPhRKeKKkYGe2zARIbLO2HSp4qZBN51zS0jJ7YDvchhI4xR6DTEdwBYolsugH6ETS2zHsXWJPcMchAGHfFBSzTZCR+MlNdugEZUbqDPUVP+DUHA4qArFV9S8baA1A3BsLZbJOBxY48P0N6EGbuEMHuEdHuA6ykAaMxB1wSknc//fdoVn3B215DKQySIsRLy2qusF2hxbZg4/+wx8b5JA+29JMc5Ai5QT/XSaiS+rgcRUXWtgl3CcUaI3MEV0GJUX88T7TFIbhGK6u8ZAZeq6hbX2PkkOfN9QB0wXYh/on4nurnqoAlXa5C/oNooLDdPn3AAAAABJRU5ErkJggg==" />
+                </svg>
+            </a>
+            <a class="navbar-brand" href="#"><img class="img-fluid" src="/Resources/Logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><svg xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" width="41" height="35" viewBox="0 0 41 35">
+                        <image id="Menu" width="41" height="35"
+                            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAAjCAYAAAAJ+yOQAAAABHNCSVQICAgIfAhkiAAAAllJREFUWEfVmLFOAkEQhr0DgRALYk9BSUEo6AADnQkPQMlbWIidNj6GViRCp3TUmlBQkPAAUFF5EVAuuYNzzrBkWHbZW+4WgYQEjpndb2d2/tlFOzuBlyZgFP0exBId0SA8CNbzoIFZcExgeuL19/l8XoxEIiVY5blopT5/H49Go0YqlfpajbMFyoS0bbsSCoXefE4u4/6uadoVOBDADVAMST5ri8XiUdf1G5lZ/Nr2+/2LbDb7w4omExJSXYrFYh1w0P1O7sXfcZwOBOUaAYojCcaaYRgZAM0tl8ugC2aDG9I8abVa7VqtZq7S7QJ6g3RB0ZsMHBQw3nvk81I2kq69KkgcJRpWWDgEDAPiZ1621z42OL3SkDRgUKkmC6GBWBH+s+WJ+VqOUGiChOSlnF4AH3I4HCaSyeQzVF4BrEL75FDC5xN0+TYcDr8gH3F1g1MddOtBYiK/pt/NZvOyWq1aqMLXYzLF3LKsO1jZvd+ZJfwJpI20cjfkYDBIpNPpp0OkG7qNYZpmPR6Pu+kmlS5ON6WRrCKSCBLXlKWRe0Oq1EoMxepCW9VNR4x0HFWQLJ30JeZBaiTOPy963D2JI3b8Yu4Wzmw2y8D1IRdEhewaA/R40u122/l83j2qee84cOgt/9OhV7gnT+v6AOJaiUajr6pTvc6t43xA2ouoJXoT8+l0WoA9WQZHpVda6DjjXq/XgD3pXmn3FnMVHYelkdLXBwx2KEjWCX2r49A6qQKO3ua807knMadboeqO487HlJ9dPfmo/7Ci06Eqgqz+zVW8Q0D4ltuTgPwFbTniJPKI1ZkAAAAASUVORK5CYII=" />
+                    </svg>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">FEATURES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">DEVICES</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">PRICING</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true" id="getQuoteBtn">GET A
+                            QUOTE</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+    </nav>
+    <div class="text-center secondNav">
+        <p>SALES: <a href="tel:+000000000">000 000 000 </a></p>
+    </div>
+    <main>
+        <section id="prMsg">
+            <div class="text-center" class="container">
+                <h1>Build better
+                    <span>connections</span>
+                    and deliver
+                    <span>amazing</span>
+                    customer experiences.
+                </h1>
+            </div>
+            <div class="centered-col start-btns">
+                <button class="btn" id="btnStartOne">Start now</button>
+                <button class="btn btn-border" id="btnStartTwo">Start now</button>
+
+
+            </div>
+        </section>
+        <section class="product-description">
+            <div class="product-description_header">
+                <h2>Top Rated
+                    <span>Cloud Phone System</span>
+                </h2>
+                <p>Made for business owners, not IT wizards.</p>
+                <img src="/Resources/Laptop + Phone.png" alt="laptop and phone">
+            </div>
+            <div class="centered-col pd-btns">
+                <button class="btn" id="pd-btn-one">Start now</button>
+                <button class="btn btn-border" id="pd-btn-two">Start now</button>
+            </div>
+            <div class="product-description_items">
+                <div class="item">
+                    <h3><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40"
+                            height="40" viewBox="0 0 40 40">
+                            <image id="Icon_kopia_10" data-name="Icon kopia 10" width="40" height="40"
+                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABHNCSVQICAgIfAhkiAAABHBJREFUWEftmHnIFVUYh/0qK7PNPi1toa8ICzKXjFSEsMVKRdRs+aPUT9RElNKoP5RyQamw0lKpaFFRxCW1zNRKDAtBKSE3zFLLikJpo1TMxOV59MzH9XJn7p3bxDXwhYczd+7MO785c8573vdUXfPq3nplWhX33Qp3wc1wNTSCo/A7fAvr4SPYXOYz6lWVIfB8HjYEhgZRv9Kugx3wZxByCW1z6AAXwlfwCsyAf9KITSvwIZxPDj01m3Y6bIRb4IacHlT01vBfR9qB8ADsCi+3slSRpQo8B4evQy3Mg6fgWngMusG5MQ/8i/PvwhTYD1OhMzwPT8PhYkJLEXgeTj6A9vAofBbEdqF1AC8Ee2QL7IEzoBm0gnuhR3iBueGFHqF9CXzRvsVEFhN4Jg7eg9vAnmoAC8AefQ4cV/ZSkjXhz5FB3O4g+IrwYo7JwUk3FxM4hpufCeLsmSWwE+4DB34aa8fFi+ACuBNuAsew4/PtOEdJAnXwJUyA+fA5bIe7wUlQjl3JTWvAMesQeBacPE6wnws5TBK4ghucCDpy3NVA6zhHKdTeGF7WcVsbXtphNCiNwJZcbPh4GPy0hpQH4Z0UQpIuHcGfk6AT+On9SleBk+wki+tBZ5mzzcH8BRhcdZSVnYUjVxqHUL8gzImk6JIEuip8DM7SbcHJrKzUBT+jaMdBY5gDDeH2UgRexkWGA1cNbza42v6RsUDHorGzO1wP48EZflLwLvSJfYtPwDHXC0wEnGX/hRlDDTGGLjviunBc96x8gW34ZxWYlURmdvIEvJyxwhfw92Sez5/47aLg+DxukcD6HJt9uEb6Fg7cKOt4nOP7we7PyuyA32AiuORpjsHFsBRehG/giALbcmAcMohqrhY9c5TUcuySZP6XldXg6DtwOK3OcbqBY+Ou9jV0VeCmcMKeGg3mdJUU+APPN3N6DbYo0DFmlvIm2JNaJQXai7Vg8B4cCezPj5mnmMCx6Bl+WmDOBMg9rOFH3CSJPvHpHozpvOOnU/WgAfND6AMGylNhFpsbqqnaSWJ9Ow0stq05zGIqGWZcyUwYrL97R0udtesdYAZj0mjNENlwDlw3XQ6zMqs+U3xrG8tSzZXK1eMXWBbYmJ8sDOCPt8LNh8KNJq3ekNurWQg1EW4ROkR/fr1L4R7wK55QXWDrw1rWjMIM13V5OZis/p2FqhwfbomYlFSHc37WT8H6p87iUv6LucIENVphMtZWurv/rUAnhPmg090xWTFLqovNaq2NDUMVsySBZrWmYWbaFlGFzI0lZ6JtITvASdfWg+W+YZJAN32sur4HN46MT7nWiR8W8lZ8SWa8cycsSoxTaS22eeSWm1tvmlnuWnCfT3sjiB5GG1eSNuU/ywVXKReD1FZMoA4N1O5yWYZelPcEA7s7VEnmRqXVm6ErtZUiMHLqdoWR/uxw4v3QukOwL+bJBmG3jN2dcFcstaURmO/cgt5tORf3JHMcu8taV+umUflvBPocF/jLIS6RcPn6MY2g/GuPATl0UVpubkmPAAAAAElFTkSuQmCC" />
+                        </svg>
+                        Never Miss a Call</h3>
+                    <p class="truncate">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut
+                        labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
+                        maecenas accumsan lacus vel facilisis. </p>
+                </div>
+                <div class="item">
+                    <h3><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40"
+                            height="40" viewBox="0 0 40 40">
+                            <image data-name="Icon kopia 10" width="40" height="40"
+                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABHNCSVQICAgIfAhkiAAABHBJREFUWEftmHnIFVUYh/0qK7PNPi1toa8ICzKXjFSEsMVKRdRs+aPUT9RElNKoP5RyQamw0lKpaFFRxCW1zNRKDAtBKSE3zFLLikJpo1TMxOV59MzH9XJn7p3bxDXwhYczd+7MO785c8573vdUXfPq3nplWhX33Qp3wc1wNTSCo/A7fAvr4SPYXOYz6lWVIfB8HjYEhgZRv9Kugx3wZxByCW1z6AAXwlfwCsyAf9KITSvwIZxPDj01m3Y6bIRb4IacHlT01vBfR9qB8ADsCi+3slSRpQo8B4evQy3Mg6fgWngMusG5MQ/8i/PvwhTYD1OhMzwPT8PhYkJLEXgeTj6A9vAofBbEdqF1AC8Ee2QL7IEzoBm0gnuhR3iBueGFHqF9CXzRvsVEFhN4Jg7eg9vAnmoAC8AefQ4cV/ZSkjXhz5FB3O4g+IrwYo7JwUk3FxM4hpufCeLsmSWwE+4DB34aa8fFi+ACuBNuAsew4/PtOEdJAnXwJUyA+fA5bIe7wUlQjl3JTWvAMesQeBacPE6wnws5TBK4ghucCDpy3NVA6zhHKdTeGF7WcVsbXtphNCiNwJZcbPh4GPy0hpQH4Z0UQpIuHcGfk6AT+On9SleBk+wki+tBZ5mzzcH8BRhcdZSVnYUjVxqHUL8gzImk6JIEuip8DM7SbcHJrKzUBT+jaMdBY5gDDeH2UgRexkWGA1cNbza42v6RsUDHorGzO1wP48EZflLwLvSJfYtPwDHXC0wEnGX/hRlDDTGGLjviunBc96x8gW34ZxWYlURmdvIEvJyxwhfw92Sez5/47aLg+DxukcD6HJt9uEb6Fg7cKOt4nOP7we7PyuyA32AiuORpjsHFsBRehG/giALbcmAcMohqrhY9c5TUcuySZP6XldXg6DtwOK3OcbqBY+Ou9jV0VeCmcMKeGg3mdJUU+APPN3N6DbYo0DFmlvIm2JNaJQXai7Vg8B4cCezPj5mnmMCx6Bl+WmDOBMg9rOFH3CSJPvHpHozpvOOnU/WgAfND6AMGylNhFpsbqqnaSWJ9Ow0stq05zGIqGWZcyUwYrL97R0udtesdYAZj0mjNENlwDlw3XQ6zMqs+U3xrG8tSzZXK1eMXWBbYmJ8sDOCPt8LNh8KNJq3ekNurWQg1EW4ROkR/fr1L4R7wK55QXWDrw1rWjMIM13V5OZis/p2FqhwfbomYlFSHc37WT8H6p87iUv6LucIENVphMtZWurv/rUAnhPmg090xWTFLqovNaq2NDUMVsySBZrWmYWbaFlGFzI0lZ6JtITvASdfWg+W+YZJAN32sur4HN46MT7nWiR8W8lZ8SWa8cycsSoxTaS22eeSWm1tvmlnuWnCfT3sjiB5GG1eSNuU/ywVXKReD1FZMoA4N1O5yWYZelPcEA7s7VEnmRqXVm6ErtZUiMHLqdoWR/uxw4v3QukOwL+bJBmG3jN2dcFcstaURmO/cgt5tORf3JHMcu8taV+umUflvBPocF/jLIS6RcPn6MY2g/GuPATl0UVpubkmPAAAAAElFTkSuQmCC" />
+                        </svg>
+                        Never Miss a Call</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
+                        maecenas accumsan lacus vel facilisis. </p>
+                </div>
+                <div class="item">
+                    <h3><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40"
+                            height="40" viewBox="0 0 40 40">
+                            <image data-name="Icon kopia 10" width="40" height="40"
+                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABHNCSVQICAgIfAhkiAAABHBJREFUWEftmHnIFVUYh/0qK7PNPi1toa8ICzKXjFSEsMVKRdRs+aPUT9RElNKoP5RyQamw0lKpaFFRxCW1zNRKDAtBKSE3zFLLikJpo1TMxOV59MzH9XJn7p3bxDXwhYczd+7MO785c8573vdUXfPq3nplWhX33Qp3wc1wNTSCo/A7fAvr4SPYXOYz6lWVIfB8HjYEhgZRv9Kugx3wZxByCW1z6AAXwlfwCsyAf9KITSvwIZxPDj01m3Y6bIRb4IacHlT01vBfR9qB8ADsCi+3slSRpQo8B4evQy3Mg6fgWngMusG5MQ/8i/PvwhTYD1OhMzwPT8PhYkJLEXgeTj6A9vAofBbEdqF1AC8Ee2QL7IEzoBm0gnuhR3iBueGFHqF9CXzRvsVEFhN4Jg7eg9vAnmoAC8AefQ4cV/ZSkjXhz5FB3O4g+IrwYo7JwUk3FxM4hpufCeLsmSWwE+4DB34aa8fFi+ACuBNuAsew4/PtOEdJAnXwJUyA+fA5bIe7wUlQjl3JTWvAMesQeBacPE6wnws5TBK4ghucCDpy3NVA6zhHKdTeGF7WcVsbXtphNCiNwJZcbPh4GPy0hpQH4Z0UQpIuHcGfk6AT+On9SleBk+wki+tBZ5mzzcH8BRhcdZSVnYUjVxqHUL8gzImk6JIEuip8DM7SbcHJrKzUBT+jaMdBY5gDDeH2UgRexkWGA1cNbza42v6RsUDHorGzO1wP48EZflLwLvSJfYtPwDHXC0wEnGX/hRlDDTGGLjviunBc96x8gW34ZxWYlURmdvIEvJyxwhfw92Sez5/47aLg+DxukcD6HJt9uEb6Fg7cKOt4nOP7we7PyuyA32AiuORpjsHFsBRehG/giALbcmAcMohqrhY9c5TUcuySZP6XldXg6DtwOK3OcbqBY+Ou9jV0VeCmcMKeGg3mdJUU+APPN3N6DbYo0DFmlvIm2JNaJQXai7Vg8B4cCezPj5mnmMCx6Bl+WmDOBMg9rOFH3CSJPvHpHozpvOOnU/WgAfND6AMGylNhFpsbqqnaSWJ9Ow0stq05zGIqGWZcyUwYrL97R0udtesdYAZj0mjNENlwDlw3XQ6zMqs+U3xrG8tSzZXK1eMXWBbYmJ8sDOCPt8LNh8KNJq3ekNurWQg1EW4ROkR/fr1L4R7wK55QXWDrw1rWjMIM13V5OZis/p2FqhwfbomYlFSHc37WT8H6p87iUv6LucIENVphMtZWurv/rUAnhPmg090xWTFLqovNaq2NDUMVsySBZrWmYWbaFlGFzI0lZ6JtITvASdfWg+W+YZJAN32sur4HN46MT7nWiR8W8lZ8SWa8cycsSoxTaS22eeSWm1tvmlnuWnCfT3sjiB5GG1eSNuU/ywVXKReD1FZMoA4N1O5yWYZelPcEA7s7VEnmRqXVm6ErtZUiMHLqdoWR/uxw4v3QukOwL+bJBmG3jN2dcFcstaURmO/cgt5tORf3JHMcu8taV+umUflvBPocF/jLIS6RcPn6MY2g/GuPATl0UVpubkmPAAAAAElFTkSuQmCC" />
+                        </svg>
+                        Never Miss a Call</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
+                        maecenas accumsan lacus vel facilisis. </p>
+                </div>
+                <div class="item">
+                    <h3><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40"
+                            height="40" viewBox="0 0 40 40">
+                            <image data-name="Icon kopia 10" width="40" height="40"
+                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABHNCSVQICAgIfAhkiAAABHBJREFUWEftmHnIFVUYh/0qK7PNPi1toa8ICzKXjFSEsMVKRdRs+aPUT9RElNKoP5RyQamw0lKpaFFRxCW1zNRKDAtBKSE3zFLLikJpo1TMxOV59MzH9XJn7p3bxDXwhYczd+7MO785c8573vdUXfPq3nplWhX33Qp3wc1wNTSCo/A7fAvr4SPYXOYz6lWVIfB8HjYEhgZRv9Kugx3wZxByCW1z6AAXwlfwCsyAf9KITSvwIZxPDj01m3Y6bIRb4IacHlT01vBfR9qB8ADsCi+3slSRpQo8B4evQy3Mg6fgWngMusG5MQ/8i/PvwhTYD1OhMzwPT8PhYkJLEXgeTj6A9vAofBbEdqF1AC8Ee2QL7IEzoBm0gnuhR3iBueGFHqF9CXzRvsVEFhN4Jg7eg9vAnmoAC8AefQ4cV/ZSkjXhz5FB3O4g+IrwYo7JwUk3FxM4hpufCeLsmSWwE+4DB34aa8fFi+ACuBNuAsew4/PtOEdJAnXwJUyA+fA5bIe7wUlQjl3JTWvAMesQeBacPE6wnws5TBK4ghucCDpy3NVA6zhHKdTeGF7WcVsbXtphNCiNwJZcbPh4GPy0hpQH4Z0UQpIuHcGfk6AT+On9SleBk+wki+tBZ5mzzcH8BRhcdZSVnYUjVxqHUL8gzImk6JIEuip8DM7SbcHJrKzUBT+jaMdBY5gDDeH2UgRexkWGA1cNbza42v6RsUDHorGzO1wP48EZflLwLvSJfYtPwDHXC0wEnGX/hRlDDTGGLjviunBc96x8gW34ZxWYlURmdvIEvJyxwhfw92Sez5/47aLg+DxukcD6HJt9uEb6Fg7cKOt4nOP7we7PyuyA32AiuORpjsHFsBRehG/giALbcmAcMohqrhY9c5TUcuySZP6XldXg6DtwOK3OcbqBY+Ou9jV0VeCmcMKeGg3mdJUU+APPN3N6DbYo0DFmlvIm2JNaJQXai7Vg8B4cCezPj5mnmMCx6Bl+WmDOBMg9rOFH3CSJPvHpHozpvOOnU/WgAfND6AMGylNhFpsbqqnaSWJ9Ow0stq05zGIqGWZcyUwYrL97R0udtesdYAZj0mjNENlwDlw3XQ6zMqs+U3xrG8tSzZXK1eMXWBbYmJ8sDOCPt8LNh8KNJq3ekNurWQg1EW4ROkR/fr1L4R7wK55QXWDrw1rWjMIM13V5OZis/p2FqhwfbomYlFSHc37WT8H6p87iUv6LucIENVphMtZWurv/rUAnhPmg090xWTFLqovNaq2NDUMVsySBZrWmYWbaFlGFzI0lZ6JtITvASdfWg+W+YZJAN32sur4HN46MT7nWiR8W8lZ8SWa8cycsSoxTaS22eeSWm1tvmlnuWnCfT3sjiB5GG1eSNuU/ywVXKReD1FZMoA4N1O5yWYZelPcEA7s7VEnmRqXVm6ErtZUiMHLqdoWR/uxw4v3QukOwL+bJBmG3jN2dcFcstaURmO/cgt5tORf3JHMcu8taV+umUflvBPocF/jLIS6RcPn6MY2g/GuPATl0UVpubkmPAAAAAElFTkSuQmCC" />
+                        </svg>
+                        Never Miss a Call</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
+                        maecenas accumsan lacus vel facilisis. </p>
+                </div>
+                <div class="item">
+                    <h3><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40"
+                            height="40" viewBox="0 0 40 40">
+                            <image data-name="Icon kopia 10" width="40" height="40"
+                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABHNCSVQICAgIfAhkiAAABHBJREFUWEftmHnIFVUYh/0qK7PNPi1toa8ICzKXjFSEsMVKRdRs+aPUT9RElNKoP5RyQamw0lKpaFFRxCW1zNRKDAtBKSE3zFLLikJpo1TMxOV59MzH9XJn7p3bxDXwhYczd+7MO785c8573vdUXfPq3nplWhX33Qp3wc1wNTSCo/A7fAvr4SPYXOYz6lWVIfB8HjYEhgZRv9Kugx3wZxByCW1z6AAXwlfwCsyAf9KITSvwIZxPDj01m3Y6bIRb4IacHlT01vBfR9qB8ADsCi+3slSRpQo8B4evQy3Mg6fgWngMusG5MQ/8i/PvwhTYD1OhMzwPT8PhYkJLEXgeTj6A9vAofBbEdqF1AC8Ee2QL7IEzoBm0gnuhR3iBueGFHqF9CXzRvsVEFhN4Jg7eg9vAnmoAC8AefQ4cV/ZSkjXhz5FB3O4g+IrwYo7JwUk3FxM4hpufCeLsmSWwE+4DB34aa8fFi+ACuBNuAsew4/PtOEdJAnXwJUyA+fA5bIe7wUlQjl3JTWvAMesQeBacPE6wnws5TBK4ghucCDpy3NVA6zhHKdTeGF7WcVsbXtphNCiNwJZcbPh4GPy0hpQH4Z0UQpIuHcGfk6AT+On9SleBk+wki+tBZ5mzzcH8BRhcdZSVnYUjVxqHUL8gzImk6JIEuip8DM7SbcHJrKzUBT+jaMdBY5gDDeH2UgRexkWGA1cNbza42v6RsUDHorGzO1wP48EZflLwLvSJfYtPwDHXC0wEnGX/hRlDDTGGLjviunBc96x8gW34ZxWYlURmdvIEvJyxwhfw92Sez5/47aLg+DxukcD6HJt9uEb6Fg7cKOt4nOP7we7PyuyA32AiuORpjsHFsBRehG/giALbcmAcMohqrhY9c5TUcuySZP6XldXg6DtwOK3OcbqBY+Ou9jV0VeCmcMKeGg3mdJUU+APPN3N6DbYo0DFmlvIm2JNaJQXai7Vg8B4cCezPj5mnmMCx6Bl+WmDOBMg9rOFH3CSJPvHpHozpvOOnU/WgAfND6AMGylNhFpsbqqnaSWJ9Ow0stq05zGIqGWZcyUwYrL97R0udtesdYAZj0mjNENlwDlw3XQ6zMqs+U3xrG8tSzZXK1eMXWBbYmJ8sDOCPt8LNh8KNJq3ekNurWQg1EW4ROkR/fr1L4R7wK55QXWDrw1rWjMIM13V5OZis/p2FqhwfbomYlFSHc37WT8H6p87iUv6LucIENVphMtZWurv/rUAnhPmg090xWTFLqovNaq2NDUMVsySBZrWmYWbaFlGFzI0lZ6JtITvASdfWg+W+YZJAN32sur4HN46MT7nWiR8W8lZ8SWa8cycsSoxTaS22eeSWm1tvmlnuWnCfT3sjiB5GG1eSNuU/ywVXKReD1FZMoA4N1O5yWYZelPcEA7s7VEnmRqXVm6ErtZUiMHLqdoWR/uxw4v3QukOwL+bJBmG3jN2dcFcstaURmO/cgt5tORf3JHMcu8taV+umUflvBPocF/jLIS6RcPn6MY2g/GuPATl0UVpubkmPAAAAAElFTkSuQmCC" />
+                        </svg>
+                        Never Miss a Call</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
+                        maecenas accumsan lacus vel facilisis. </p>
+                </div>
+                <div class="item">
+                    <h3><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40"
+                            height="40" viewBox="0 0 40 40">
+                            <image data-name="Icon kopia 10" width="40" height="40"
+                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABHNCSVQICAgIfAhkiAAABHBJREFUWEftmHnIFVUYh/0qK7PNPi1toa8ICzKXjFSEsMVKRdRs+aPUT9RElNKoP5RyQamw0lKpaFFRxCW1zNRKDAtBKSE3zFLLikJpo1TMxOV59MzH9XJn7p3bxDXwhYczd+7MO785c8573vdUXfPq3nplWhX33Qp3wc1wNTSCo/A7fAvr4SPYXOYz6lWVIfB8HjYEhgZRv9Kugx3wZxByCW1z6AAXwlfwCsyAf9KITSvwIZxPDj01m3Y6bIRb4IacHlT01vBfR9qB8ADsCi+3slSRpQo8B4evQy3Mg6fgWngMusG5MQ/8i/PvwhTYD1OhMzwPT8PhYkJLEXgeTj6A9vAofBbEdqF1AC8Ee2QL7IEzoBm0gnuhR3iBueGFHqF9CXzRvsVEFhN4Jg7eg9vAnmoAC8AefQ4cV/ZSkjXhz5FB3O4g+IrwYo7JwUk3FxM4hpufCeLsmSWwE+4DB34aa8fFi+ACuBNuAsew4/PtOEdJAnXwJUyA+fA5bIe7wUlQjl3JTWvAMesQeBacPE6wnws5TBK4ghucCDpy3NVA6zhHKdTeGF7WcVsbXtphNCiNwJZcbPh4GPy0hpQH4Z0UQpIuHcGfk6AT+On9SleBk+wki+tBZ5mzzcH8BRhcdZSVnYUjVxqHUL8gzImk6JIEuip8DM7SbcHJrKzUBT+jaMdBY5gDDeH2UgRexkWGA1cNbza42v6RsUDHorGzO1wP48EZflLwLvSJfYtPwDHXC0wEnGX/hRlDDTGGLjviunBc96x8gW34ZxWYlURmdvIEvJyxwhfw92Sez5/47aLg+DxukcD6HJt9uEb6Fg7cKOt4nOP7we7PyuyA32AiuORpjsHFsBRehG/giALbcmAcMohqrhY9c5TUcuySZP6XldXg6DtwOK3OcbqBY+Ou9jV0VeCmcMKeGg3mdJUU+APPN3N6DbYo0DFmlvIm2JNaJQXai7Vg8B4cCezPj5mnmMCx6Bl+WmDOBMg9rOFH3CSJPvHpHozpvOOnU/WgAfND6AMGylNhFpsbqqnaSWJ9Ow0stq05zGIqGWZcyUwYrL97R0udtesdYAZj0mjNENlwDlw3XQ6zMqs+U3xrG8tSzZXK1eMXWBbYmJ8sDOCPt8LNh8KNJq3ekNurWQg1EW4ROkR/fr1L4R7wK55QXWDrw1rWjMIM13V5OZis/p2FqhwfbomYlFSHc37WT8H6p87iUv6LucIENVphMtZWurv/rUAnhPmg090xWTFLqovNaq2NDUMVsySBZrWmYWbaFlGFzI0lZ6JtITvASdfWg+W+YZJAN32sur4HN46MT7nWiR8W8lZ8SWa8cycsSoxTaS22eeSWm1tvmlnuWnCfT3sjiB5GG1eSNuU/ywVXKReD1FZMoA4N1O5yWYZelPcEA7s7VEnmRqXVm6ErtZUiMHLqdoWR/uxw4v3QukOwL+bJBmG3jN2dcFcstaURmO/cgt5tORf3JHMcu8taV+umUflvBPocF/jLIS6RcPn6MY2g/GuPATl0UVpubkmPAAAAAElFTkSuQmCC" />
+                        </svg>
+                        Never Miss a Call</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
+                        maecenas accumsan lacus vel facilisis. </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="calls">
+            <div class="calls_header">
+                <h2><img src="/Resources/Phone CTA2.png" alt="hand holding a phone">Switch Your Old Phone
+                    <span> To A New System</span>
+                </h2>
+
+            </div>
+            <div class="text-center calls_btn"><button class="btn">Start now</button></div>
+
+            <div class="calls_queue">
+                <p class="calls_queue_p"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="33"
+                        viewBox="0 0 33 33">
+                        <g id="Icon" transform="matrix(1, 0, 0, 1, -33.127, -33.127)">
+                            <g id="Group_136" data-name="Group 136">
+                                <path id="Path_6983" data-name="Path 6983"
+                                    d="M57.478,65.578a56.437,56.437,0,0,1-15.7,0c-3.635-.584-7.516-4.465-8.1-8.1a56.427,56.427,0,0,1,0-15.7c.584-3.635,4.465-7.516,8.1-8.1a56.427,56.427,0,0,1,15.7,0c3.635.584,7.516,4.465,8.1,8.1a56.445,56.445,0,0,1,0,15.7C64.994,61.113,61.113,64.994,57.478,65.578Z"
+                                    fill="#007ad8" />
+                            </g>
+                            <g id="Group_138" data-name="Group 138">
+                                <g id="Group_137" data-name="Group 137">
+                                    <path id="Path_6984" data-name="Path 6984"
+                                        d="M49.627,39.272A10.355,10.355,0,1,0,59.982,49.627,10.367,10.367,0,0,0,49.627,39.272Zm0,18.984a8.6,8.6,0,0,1-6.04-2.477V54.373a1.623,1.623,0,0,1,.4-.981,2,2,0,0,0,.467-1.177c0-.823-.743-.906-1.142-.951a1.2,1.2,0,0,1-.71-.217,2.74,2.74,0,0,1-.358-.555,3.326,3.326,0,0,0-1.214-1.4A8.633,8.633,0,0,1,49.627,41c.237,0,.47.017.7.035a.871.871,0,0,0-.144.091.431.431,0,0,0,.018.627,1.159,1.159,0,0,1,.191.207c-.01.021-.089.156-.531.38a3.124,3.124,0,0,0-1.7,1.913,1.051,1.051,0,0,0,.292.934.431.431,0,0,0,.305.126,3.367,3.367,0,0,0,1.51-.436,3.276,3.276,0,0,1,1.51-.427c1.693,0,3.02.379,3.02.863,0,.177-.055.232-.076.252-.212.209-.934.2-1.568.185-.168,0-.34-.006-.513-.006a1.869,1.869,0,0,1-.978-.185,2.355,2.355,0,0,0-1.18-.247A4.173,4.173,0,0,0,47.6,46.3a2.409,2.409,0,0,0-.581,2.1c.011.128.023.249.023.36,0,.85.868,1.294,1.726,1.294a5.507,5.507,0,0,1,2.589.432,2.5,2.5,0,0,0,.259,1.077,1.506,1.506,0,0,1,.172.648.43.43,0,0,1-.118.348,1.359,1.359,0,0,0-.313.946,3.721,3.721,0,0,0,.974,2.015.433.433,0,0,0,.321.142.419.419,0,0,0,.107-.013c.254-.065,2.482-.678,2.482-2.144a.822.822,0,0,1,.359-.771,1.177,1.177,0,0,0,.5-.955,4.847,4.847,0,0,1,1.183-1.868.432.432,0,0,0-.055-.63,5.493,5.493,0,0,1-1.572-1.928,2.464,2.464,0,0,1,.57.416.719.719,0,0,0,.555.2,2.246,2.246,0,0,0,1.158-.64,8.6,8.6,0,0,1-8.312,10.917Z"
+                                        fill="#fff" />
+                                </g>
+                            </g>
+                        </g>
+                    </svg>Call Queing
+                </p>
+                <p class="features-p">View More Features</p>
+            </div>
+            <div class="skew-after"></div>
+
+        </section>
+
+        <section class="service">
+            <div class="service_header">
+                <h3>Service Available
+                    <span>All Over The World!</span>
+                </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo Lorem ipsum dolor sit
+                    amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo Lorem ipsum dolor sit
+                    amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo</p>
+            </div>
+            <div>
+                <img src="/Resources/Globe.png" alt="globe">
+            </div>
+            <div>
+                <h3>How We Serve Your <span>Industry</span> </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
+                    accumsan lacus vel facilisis.</p>
+            </div>
+            <div>
+
+                <div class="accordion" id="accordionPanelsStayOpenExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                aria-controls="panelsStayOpen-collapseOne">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="32" height="32" viewBox="0 0 32 32">
+                                    <image id="excavator" width="32" height="32"
+                                        xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAABGpJREFUWEe1l3mIVVUcx7PFtnEbWmyxRo0Jbd8tC6fCkExKEdHEmoJWyaJ90ZqGFtSotAJJ0Ao0LNcIDRd8oZjYH4kV0UZToVZYjZgNLaN+PnFuvHe4Zxbf88CHe985957zvb/tnNfloLbbkQy3tPNMWcNdEm9X0T8froMdcDssLWulxMspAY08fxGMgUFh8elcp8GflRSSErCMRd6H2WGxJq6/wXHwSLDO3koISQkoMPnxcA9cAs8EixzL9UXYBffBhnJFpASsY+IfoRYugJkwDq6GL+BOaIBVwSI/7K+QlIDNTDgJvg5053oHPB1EfMq1FzwFt8LLMBV2d1ZISsDnTDQedIOLGoi2uyIR9p0OuuU8uBs6lS0pAU1MZAoOA91gGmYtT4Rj18KbcCPomg61lIDtvH0pmI4fwyvRbJmIT+jfAw+DbtEdY+GaDq3OQykBzYwNhOVwL3yYM6HxMTf0Wy/OBd2xAvqVK+AvJjgJtoFx8HvOhFrphtCv30+AGiiEa4c0pCxgkbESLoE+iZk0d+Ya68WcSgk4mon+AINpAhhcqWaG2ExHW0Us0JOJNP0M0EKPtiGgIYxl14oI0ORG9HpwR5RUOyAC/AoXN72GBzF5AurodI84FDaGB6yYo+E2WNCG8P+H4iA8jJGH4DE4HIyHf3ImOoa+78A9Ih53Tsv2B2A6Fzc/ytRenXXGAjR3X1gbvsLS+m6OAC3zOHg+GBmNe4A5DX4FXVncjuLHE9Ab3FFLCpHB9wtUg1ngXlAPQ3MEPEmfVvB84FdtCs/47k3gZqY7HgRrxSlFc5hdN8PbsQDPfxacM+BbsLxeDPo0bu/RsRCmgKmaxUAN94UgwC36BbBCKixrCnPntK+l2AU96NBk3cDd8DKoh7dyBGylz3r/GehrK6dNE7t5aYE34EI4EyaD27sWc2P7CmqgORNgJFvDf4bnoD9oSk88L0UC9J8W8ktGRGP+9Mxo7CjAeNBVZtX5oMCVYJ0pEWBguP0Ogb/DpFY3F3kgWiQLwME5i2dd7g0KSJ0NzI4SASq6Htx6s3YLN37hqGghd0fTzCObG1VeM5M8xO6MBv/l9zdgYGrJ/1yQ1f6DuS8+6Z7K7y2g6TR51oxet93XQJ/qz0PA1DOGtJrvGgeOK9J7+/y/4bPGhJmwNIsBc/IsaCpayFuL0v2gFT6Cc0AfXgXWCs8EA8KkBq6xYwH7MizYNczp1xpnxtj38DqYIbWZAM//vmjgxc0082s9810OusVKVgeefjyG6VNdY0Z4eHkePC29Cm7Tuku3+Z5usS4opioTYE6ay4sh3v08opuSHs+NaMuvZwH/uHg/ESzHfoSFxxR9B/wDY5quAS2pMH8bxMZbAaqL68DJodMDpVlhENlOBJVbwZzAQNUdTmzWeD0CrgCj3gA8G4wVDzUez+bBleAHOJclfBE0xnuBAaO5VajP4qYbfoJZ4JfkPZPzWkmX1db/Ec9Ca+pI5q5odsTNYG0Nnaln2hNQskPuA6+K9iyo321PAAAAAElFTkSuQmCC">
+                                    </image>
+                                </svg>Constructions
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                            aria-labelledby="panelsStayOpen-headingOne">
+                            <div class="accordion-body">
+                                <p>Made for business owners, not IT wizards. We can help you set up in minutes.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed nulla pariatur.
+                                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                    deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus
+                                    error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque
+                                    ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta
+                                    sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+                                    aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
+                                    nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                                    consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
+                                    labore et dolore magnam aliquam quaerat voluptatem.</p>
+                                <p>Main advanteges</p>
+                                <ul>
+                                    <li><svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="22"
+                                            viewBox="0 0 24 22">
+                                            <image id="tick-mark" width="24" height="22"
+                                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAWCAYAAADafVyIAAAABHNCSVQICAgIfAhkiAAAAjFJREFUSEutlU1IVkEUhj8NJMtFkBBiBUmZYCCuWhW2cNPCjbYI+hGUSN0GZRBlmyIRV+ZCIQg0MFoIRhoUJi5cFIiLaCEu/IvCjaiUkenzXs7IONx7/UgHHmbmzNzzzpx7ZiYnc/9bJqWUMFYN5XAE/sICfIER+JXw7WnslfA6J0HgEoOP4GKK+BpjvdAaCMn5KBTBjVAgD2MXNAaOf9CfB42fggIbH7dFbFrfOS+2fpMvkI/xLWj1KsvQAa9g2hPMpX0ebkMnTCY4b8be7Qv0Y7hqk4epr8NSsJOkbrjyyLkmO4ErtAfs60HqWtjYq3MnoC1/hbOwCGWwYs7PUf8OQuTrJq7cTdIOFPOPZrhF3WNtxXkI1qEqRmRX524H7TTumKNC6lUTeED92NrKfV8kK+dO4D0NHaZP5sQPwT06TwIRdUfBpaL7oQr1GVD+z8CsE1CaVUAfXPO9WzsUkTl0LpsEdPgOwl14lq2A5umDp4H4diqa/QD1HxNSyHWGojRNC5Hvs4nOczOEzmU+DnM2fpP6pRNI+skx0cpIRCU6REGpp//CbAr5lBNIStM4gTTbGIMXQHfWSYjuJ4Uo7aBlK1LDRN0AKg/Bpfe+XRUTOD0KP6EUdFFGZa+Xnd4L3WHHzN9l6nf+tv/nulY6KtYtUOc5i8usHTvQ3LQHR9fFITgBhz3HCkcDvPFXHhcifzybJ1PvsXK9Db7HOQ//Qdyc8NH/xySl4Wf4AO5aT/Kf2QJG4qDmBv7hdgAAAABJRU5ErkJggg==" />
+                                        </svg>
+                                        Lorem ipsum dolor sit amet, consectetur</li>
+                                    <li><svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="22"
+                                            viewBox="0 0 24 22">
+                                            <image id="tick-mark" width="24" height="22"
+                                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAWCAYAAADafVyIAAAABHNCSVQICAgIfAhkiAAAAjFJREFUSEutlU1IVkEUhj8NJMtFkBBiBUmZYCCuWhW2cNPCjbYI+hGUSN0GZRBlmyIRV+ZCIQg0MFoIRhoUJi5cFIiLaCEu/IvCjaiUkenzXs7IONx7/UgHHmbmzNzzzpx7ZiYnc/9bJqWUMFYN5XAE/sICfIER+JXw7WnslfA6J0HgEoOP4GKK+BpjvdAaCMn5KBTBjVAgD2MXNAaOf9CfB42fggIbH7dFbFrfOS+2fpMvkI/xLWj1KsvQAa9g2hPMpX0ebkMnTCY4b8be7Qv0Y7hqk4epr8NSsJOkbrjyyLkmO4ErtAfs60HqWtjYq3MnoC1/hbOwCGWwYs7PUf8OQuTrJq7cTdIOFPOPZrhF3WNtxXkI1qEqRmRX524H7TTumKNC6lUTeED92NrKfV8kK+dO4D0NHaZP5sQPwT06TwIRdUfBpaL7oQr1GVD+z8CsE1CaVUAfXPO9WzsUkTl0LpsEdPgOwl14lq2A5umDp4H4diqa/QD1HxNSyHWGojRNC5Hvs4nOczOEzmU+DnM2fpP6pRNI+skx0cpIRCU6REGpp//CbAr5lBNIStM4gTTbGIMXQHfWSYjuJ4Uo7aBlK1LDRN0AKg/Bpfe+XRUTOD0KP6EUdFFGZa+Xnd4L3WHHzN9l6nf+tv/nulY6KtYtUOc5i8usHTvQ3LQHR9fFITgBhz3HCkcDvPFXHhcifzybJ1PvsXK9Db7HOQ//Qdyc8NH/xySl4Wf4AO5aT/Kf2QJG4qDmBv7hdgAAAABJRU5ErkJggg==" />
+                                        </svg>
+                                        Lorem ipsum dolor sit amet, consectetur</li>
+                                    <li><svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="22"
+                                            viewBox="0 0 24 22">
+                                            <image id="tick-mark" width="24" height="22"
+                                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAWCAYAAADafVyIAAAABHNCSVQICAgIfAhkiAAAAjFJREFUSEutlU1IVkEUhj8NJMtFkBBiBUmZYCCuWhW2cNPCjbYI+hGUSN0GZRBlmyIRV+ZCIQg0MFoIRhoUJi5cFIiLaCEu/IvCjaiUkenzXs7IONx7/UgHHmbmzNzzzpx7ZiYnc/9bJqWUMFYN5XAE/sICfIER+JXw7WnslfA6J0HgEoOP4GKK+BpjvdAaCMn5KBTBjVAgD2MXNAaOf9CfB42fggIbH7dFbFrfOS+2fpMvkI/xLWj1KsvQAa9g2hPMpX0ebkMnTCY4b8be7Qv0Y7hqk4epr8NSsJOkbrjyyLkmO4ErtAfs60HqWtjYq3MnoC1/hbOwCGWwYs7PUf8OQuTrJq7cTdIOFPOPZrhF3WNtxXkI1qEqRmRX524H7TTumKNC6lUTeED92NrKfV8kK+dO4D0NHaZP5sQPwT06TwIRdUfBpaL7oQr1GVD+z8CsE1CaVUAfXPO9WzsUkTl0LpsEdPgOwl14lq2A5umDp4H4diqa/QD1HxNSyHWGojRNC5Hvs4nOczOEzmU+DnM2fpP6pRNI+skx0cpIRCU6REGpp//CbAr5lBNIStM4gTTbGIMXQHfWSYjuJ4Uo7aBlK1LDRN0AKg/Bpfe+XRUTOD0KP6EUdFFGZa+Xnd4L3WHHzN9l6nf+tv/nulY6KtYtUOc5i8usHTvQ3LQHR9fFITgBhz3HCkcDvPFXHhcifzybJ1PvsXK9Db7HOQ//Qdyc8NH/xySl4Wf4AO5aT/Kf2QJG4qDmBv7hdgAAAABJRU5ErkJggg==" />
+                                        </svg>
+                                        Lorem ipsum dolor sit amet, consectetur</li>
+                                    <li><svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="22"
+                                            viewBox="0 0 24 22">
+                                            <image id="tick-mark" width="24" height="22"
+                                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAWCAYAAADafVyIAAAABHNCSVQICAgIfAhkiAAAAjFJREFUSEutlU1IVkEUhj8NJMtFkBBiBUmZYCCuWhW2cNPCjbYI+hGUSN0GZRBlmyIRV+ZCIQg0MFoIRhoUJi5cFIiLaCEu/IvCjaiUkenzXs7IONx7/UgHHmbmzNzzzpx7ZiYnc/9bJqWUMFYN5XAE/sICfIER+JXw7WnslfA6J0HgEoOP4GKK+BpjvdAaCMn5KBTBjVAgD2MXNAaOf9CfB42fggIbH7dFbFrfOS+2fpMvkI/xLWj1KsvQAa9g2hPMpX0ebkMnTCY4b8be7Qv0Y7hqk4epr8NSsJOkbrjyyLkmO4ErtAfs60HqWtjYq3MnoC1/hbOwCGWwYs7PUf8OQuTrJq7cTdIOFPOPZrhF3WNtxXkI1qEqRmRX524H7TTumKNC6lUTeED92NrKfV8kK+dO4D0NHaZP5sQPwT06TwIRdUfBpaL7oQr1GVD+z8CsE1CaVUAfXPO9WzsUkTl0LpsEdPgOwl14lq2A5umDp4H4diqa/QD1HxNSyHWGojRNC5Hvs4nOczOEzmU+DnM2fpP6pRNI+skx0cpIRCU6REGpp//CbAr5lBNIStM4gTTbGIMXQHfWSYjuJ4Uo7aBlK1LDRN0AKg/Bpfe+XRUTOD0KP6EUdFFGZa+Xnd4L3WHHzN9l6nf+tv/nulY6KtYtUOc5i8usHTvQ3LQHR9fFITgBhz3HCkcDvPFXHhcifzybJ1PvsXK9Db7HOQ//Qdyc8NH/xySl4Wf4AO5aT/Kf2QJG4qDmBv7hdgAAAABJRU5ErkJggg==" />
+                                        </svg>
+                                        Lorem ipsum dolor sit amet, consectetur</li>
+                                </ul>
+                                <a href="#">Learn More ></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseTwo">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="32" height="32" viewBox="0 0 32 32">
+                                    <image id="excavator" width="32" height="32"
+                                        xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAABGpJREFUWEe1l3mIVVUcx7PFtnEbWmyxRo0Jbd8tC6fCkExKEdHEmoJWyaJ90ZqGFtSotAJJ0Ao0LNcIDRd8oZjYH4kV0UZToVZYjZgNLaN+PnFuvHe4Zxbf88CHe985957zvb/tnNfloLbbkQy3tPNMWcNdEm9X0T8froMdcDssLWulxMspAY08fxGMgUFh8elcp8GflRSSErCMRd6H2WGxJq6/wXHwSLDO3koISQkoMPnxcA9cAs8EixzL9UXYBffBhnJFpASsY+IfoRYugJkwDq6GL+BOaIBVwSI/7K+QlIDNTDgJvg5053oHPB1EfMq1FzwFt8LLMBV2d1ZISsDnTDQedIOLGoi2uyIR9p0OuuU8uBs6lS0pAU1MZAoOA91gGmYtT4Rj18KbcCPomg61lIDtvH0pmI4fwyvRbJmIT+jfAw+DbtEdY+GaDq3OQykBzYwNhOVwL3yYM6HxMTf0Wy/OBd2xAvqVK+AvJjgJtoFx8HvOhFrphtCv30+AGiiEa4c0pCxgkbESLoE+iZk0d+Ya68WcSgk4mon+AINpAhhcqWaG2ExHW0Us0JOJNP0M0EKPtiGgIYxl14oI0ORG9HpwR5RUOyAC/AoXN72GBzF5AurodI84FDaGB6yYo+E2WNCG8P+H4iA8jJGH4DE4HIyHf3ImOoa+78A9Ih53Tsv2B2A6Fzc/ytRenXXGAjR3X1gbvsLS+m6OAC3zOHg+GBmNe4A5DX4FXVncjuLHE9Ab3FFLCpHB9wtUg1ngXlAPQ3MEPEmfVvB84FdtCs/47k3gZqY7HgRrxSlFc5hdN8PbsQDPfxacM+BbsLxeDPo0bu/RsRCmgKmaxUAN94UgwC36BbBCKixrCnPntK+l2AU96NBk3cDd8DKoh7dyBGylz3r/GehrK6dNE7t5aYE34EI4EyaD27sWc2P7CmqgORNgJFvDf4bnoD9oSk88L0UC9J8W8ktGRGP+9Mxo7CjAeNBVZtX5oMCVYJ0pEWBguP0Ogb/DpFY3F3kgWiQLwME5i2dd7g0KSJ0NzI4SASq6Htx6s3YLN37hqGghd0fTzCObG1VeM5M8xO6MBv/l9zdgYGrJ/1yQ1f6DuS8+6Z7K7y2g6TR51oxet93XQJ/qz0PA1DOGtJrvGgeOK9J7+/y/4bPGhJmwNIsBc/IsaCpayFuL0v2gFT6Cc0AfXgXWCs8EA8KkBq6xYwH7MizYNczp1xpnxtj38DqYIbWZAM//vmjgxc0082s9810OusVKVgeefjyG6VNdY0Z4eHkePC29Cm7Tuku3+Z5usS4opioTYE6ay4sh3v08opuSHs+NaMuvZwH/uHg/ESzHfoSFxxR9B/wDY5quAS2pMH8bxMZbAaqL68DJodMDpVlhENlOBJVbwZzAQNUdTmzWeD0CrgCj3gA8G4wVDzUez+bBleAHOJclfBE0xnuBAaO5VajP4qYbfoJZ4JfkPZPzWkmX1db/Ec9Ca+pI5q5odsTNYG0Nnaln2hNQskPuA6+K9iyo321PAAAAAElFTkSuQmCC">
+                                    </image>
+                                </svg>Constructions
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                            aria-labelledby="panelsStayOpen-headingTwo">
+                            <div class="accordion-body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed nulla pariatur.
+                                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                    deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus
+                                    error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque
+                                    ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta
+                                    sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+                                    aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
+                                    nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                                    consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
+                                    labore et dolore magnam aliquam quaerat voluptatem.</p>
+                                <p>Main advanteges</p>
+                                <ul>
+                                    <li><svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="22"
+                                            viewBox="0 0 24 22">
+                                            <image id="tick-mark" width="24" height="22"
+                                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAWCAYAAADafVyIAAAABHNCSVQICAgIfAhkiAAAAjFJREFUSEutlU1IVkEUhj8NJMtFkBBiBUmZYCCuWhW2cNPCjbYI+hGUSN0GZRBlmyIRV+ZCIQg0MFoIRhoUJi5cFIiLaCEu/IvCjaiUkenzXs7IONx7/UgHHmbmzNzzzpx7ZiYnc/9bJqWUMFYN5XAE/sICfIER+JXw7WnslfA6J0HgEoOP4GKK+BpjvdAaCMn5KBTBjVAgD2MXNAaOf9CfB42fggIbH7dFbFrfOS+2fpMvkI/xLWj1KsvQAa9g2hPMpX0ebkMnTCY4b8be7Qv0Y7hqk4epr8NSsJOkbrjyyLkmO4ErtAfs60HqWtjYq3MnoC1/hbOwCGWwYs7PUf8OQuTrJq7cTdIOFPOPZrhF3WNtxXkI1qEqRmRX524H7TTumKNC6lUTeED92NrKfV8kK+dO4D0NHaZP5sQPwT06TwIRdUfBpaL7oQr1GVD+z8CsE1CaVUAfXPO9WzsUkTl0LpsEdPgOwl14lq2A5umDp4H4diqa/QD1HxNSyHWGojRNC5Hvs4nOczOEzmU+DnM2fpP6pRNI+skx0cpIRCU6REGpp//CbAr5lBNIStM4gTTbGIMXQHfWSYjuJ4Uo7aBlK1LDRN0AKg/Bpfe+XRUTOD0KP6EUdFFGZa+Xnd4L3WHHzN9l6nf+tv/nulY6KtYtUOc5i8usHTvQ3LQHR9fFITgBhz3HCkcDvPFXHhcifzybJ1PvsXK9Db7HOQ//Qdyc8NH/xySl4Wf4AO5aT/Kf2QJG4qDmBv7hdgAAAABJRU5ErkJggg==" />
+                                        </svg>
+                                        Lorem ipsum dolor sit amet, consectetur</li>
+                                    <li><svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="22"
+                                            viewBox="0 0 24 22">
+                                            <image id="tick-mark" width="24" height="22"
+                                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAWCAYAAADafVyIAAAABHNCSVQICAgIfAhkiAAAAjFJREFUSEutlU1IVkEUhj8NJMtFkBBiBUmZYCCuWhW2cNPCjbYI+hGUSN0GZRBlmyIRV+ZCIQg0MFoIRhoUJi5cFIiLaCEu/IvCjaiUkenzXs7IONx7/UgHHmbmzNzzzpx7ZiYnc/9bJqWUMFYN5XAE/sICfIER+JXw7WnslfA6J0HgEoOP4GKK+BpjvdAaCMn5KBTBjVAgD2MXNAaOf9CfB42fggIbH7dFbFrfOS+2fpMvkI/xLWj1KsvQAa9g2hPMpX0ebkMnTCY4b8be7Qv0Y7hqk4epr8NSsJOkbrjyyLkmO4ErtAfs60HqWtjYq3MnoC1/hbOwCGWwYs7PUf8OQuTrJq7cTdIOFPOPZrhF3WNtxXkI1qEqRmRX524H7TTumKNC6lUTeED92NrKfV8kK+dO4D0NHaZP5sQPwT06TwIRdUfBpaL7oQr1GVD+z8CsE1CaVUAfXPO9WzsUkTl0LpsEdPgOwl14lq2A5umDp4H4diqa/QD1HxNSyHWGojRNC5Hvs4nOczOEzmU+DnM2fpP6pRNI+skx0cpIRCU6REGpp//CbAr5lBNIStM4gTTbGIMXQHfWSYjuJ4Uo7aBlK1LDRN0AKg/Bpfe+XRUTOD0KP6EUdFFGZa+Xnd4L3WHHzN9l6nf+tv/nulY6KtYtUOc5i8usHTvQ3LQHR9fFITgBhz3HCkcDvPFXHhcifzybJ1PvsXK9Db7HOQ//Qdyc8NH/xySl4Wf4AO5aT/Kf2QJG4qDmBv7hdgAAAABJRU5ErkJggg==" />
+                                        </svg>
+                                        Lorem ipsum dolor sit amet, consectetur</li>
+                                    <li><svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="22"
+                                            viewBox="0 0 24 22">
+                                            <image id="tick-mark" width="24" height="22"
+                                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAWCAYAAADafVyIAAAABHNCSVQICAgIfAhkiAAAAjFJREFUSEutlU1IVkEUhj8NJMtFkBBiBUmZYCCuWhW2cNPCjbYI+hGUSN0GZRBlmyIRV+ZCIQg0MFoIRhoUJi5cFIiLaCEu/IvCjaiUkenzXs7IONx7/UgHHmbmzNzzzpx7ZiYnc/9bJqWUMFYN5XAE/sICfIER+JXw7WnslfA6J0HgEoOP4GKK+BpjvdAaCMn5KBTBjVAgD2MXNAaOf9CfB42fggIbH7dFbFrfOS+2fpMvkI/xLWj1KsvQAa9g2hPMpX0ebkMnTCY4b8be7Qv0Y7hqk4epr8NSsJOkbrjyyLkmO4ErtAfs60HqWtjYq3MnoC1/hbOwCGWwYs7PUf8OQuTrJq7cTdIOFPOPZrhF3WNtxXkI1qEqRmRX524H7TTumKNC6lUTeED92NrKfV8kK+dO4D0NHaZP5sQPwT06TwIRdUfBpaL7oQr1GVD+z8CsE1CaVUAfXPO9WzsUkTl0LpsEdPgOwl14lq2A5umDp4H4diqa/QD1HxNSyHWGojRNC5Hvs4nOczOEzmU+DnM2fpP6pRNI+skx0cpIRCU6REGpp//CbAr5lBNIStM4gTTbGIMXQHfWSYjuJ4Uo7aBlK1LDRN0AKg/Bpfe+XRUTOD0KP6EUdFFGZa+Xnd4L3WHHzN9l6nf+tv/nulY6KtYtUOc5i8usHTvQ3LQHR9fFITgBhz3HCkcDvPFXHhcifzybJ1PvsXK9Db7HOQ//Qdyc8NH/xySl4Wf4AO5aT/Kf2QJG4qDmBv7hdgAAAABJRU5ErkJggg==" />
+                                        </svg>
+                                        Lorem ipsum dolor sit amet, consectetur</li>
+                                    <li><svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="22"
+                                            viewBox="0 0 24 22">
+                                            <image id="tick-mark" width="24" height="22"
+                                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAWCAYAAADafVyIAAAABHNCSVQICAgIfAhkiAAAAjFJREFUSEutlU1IVkEUhj8NJMtFkBBiBUmZYCCuWhW2cNPCjbYI+hGUSN0GZRBlmyIRV+ZCIQg0MFoIRhoUJi5cFIiLaCEu/IvCjaiUkenzXs7IONx7/UgHHmbmzNzzzpx7ZiYnc/9bJqWUMFYN5XAE/sICfIER+JXw7WnslfA6J0HgEoOP4GKK+BpjvdAaCMn5KBTBjVAgD2MXNAaOf9CfB42fggIbH7dFbFrfOS+2fpMvkI/xLWj1KsvQAa9g2hPMpX0ebkMnTCY4b8be7Qv0Y7hqk4epr8NSsJOkbrjyyLkmO4ErtAfs60HqWtjYq3MnoC1/hbOwCGWwYs7PUf8OQuTrJq7cTdIOFPOPZrhF3WNtxXkI1qEqRmRX524H7TTumKNC6lUTeED92NrKfV8kK+dO4D0NHaZP5sQPwT06TwIRdUfBpaL7oQr1GVD+z8CsE1CaVUAfXPO9WzsUkTl0LpsEdPgOwl14lq2A5umDp4H4diqa/QD1HxNSyHWGojRNC5Hvs4nOczOEzmU+DnM2fpP6pRNI+skx0cpIRCU6REGpp//CbAr5lBNIStM4gTTbGIMXQHfWSYjuJ4Uo7aBlK1LDRN0AKg/Bpfe+XRUTOD0KP6EUdFFGZa+Xnd4L3WHHzN9l6nf+tv/nulY6KtYtUOc5i8usHTvQ3LQHR9fFITgBhz3HCkcDvPFXHhcifzybJ1PvsXK9Db7HOQ//Qdyc8NH/xySl4Wf4AO5aT/Kf2QJG4qDmBv7hdgAAAABJRU5ErkJggg==" />
+                                        </svg>
+                                        Lorem ipsum dolor sit amet, consectetur</li>
+                                </ul>
+                                <a href="#">Learn More ></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseThree">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="32" height="32" viewBox="0 0 32 32">
+                                    <image id="excavator" width="32" height="32"
+                                        xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAABGpJREFUWEe1l3mIVVUcx7PFtnEbWmyxRo0Jbd8tC6fCkExKEdHEmoJWyaJ90ZqGFtSotAJJ0Ao0LNcIDRd8oZjYH4kV0UZToVZYjZgNLaN+PnFuvHe4Zxbf88CHe985957zvb/tnNfloLbbkQy3tPNMWcNdEm9X0T8froMdcDssLWulxMspAY08fxGMgUFh8elcp8GflRSSErCMRd6H2WGxJq6/wXHwSLDO3koISQkoMPnxcA9cAs8EixzL9UXYBffBhnJFpASsY+IfoRYugJkwDq6GL+BOaIBVwSI/7K+QlIDNTDgJvg5053oHPB1EfMq1FzwFt8LLMBV2d1ZISsDnTDQedIOLGoi2uyIR9p0OuuU8uBs6lS0pAU1MZAoOA91gGmYtT4Rj18KbcCPomg61lIDtvH0pmI4fwyvRbJmIT+jfAw+DbtEdY+GaDq3OQykBzYwNhOVwL3yYM6HxMTf0Wy/OBd2xAvqVK+AvJjgJtoFx8HvOhFrphtCv30+AGiiEa4c0pCxgkbESLoE+iZk0d+Ya68WcSgk4mon+AINpAhhcqWaG2ExHW0Us0JOJNP0M0EKPtiGgIYxl14oI0ORG9HpwR5RUOyAC/AoXN72GBzF5AurodI84FDaGB6yYo+E2WNCG8P+H4iA8jJGH4DE4HIyHf3ImOoa+78A9Ih53Tsv2B2A6Fzc/ytRenXXGAjR3X1gbvsLS+m6OAC3zOHg+GBmNe4A5DX4FXVncjuLHE9Ab3FFLCpHB9wtUg1ngXlAPQ3MEPEmfVvB84FdtCs/47k3gZqY7HgRrxSlFc5hdN8PbsQDPfxacM+BbsLxeDPo0bu/RsRCmgKmaxUAN94UgwC36BbBCKixrCnPntK+l2AU96NBk3cDd8DKoh7dyBGylz3r/GehrK6dNE7t5aYE34EI4EyaD27sWc2P7CmqgORNgJFvDf4bnoD9oSk88L0UC9J8W8ktGRGP+9Mxo7CjAeNBVZtX5oMCVYJ0pEWBguP0Ogb/DpFY3F3kgWiQLwME5i2dd7g0KSJ0NzI4SASq6Htx6s3YLN37hqGghd0fTzCObG1VeM5M8xO6MBv/l9zdgYGrJ/1yQ1f6DuS8+6Z7K7y2g6TR51oxet93XQJ/qz0PA1DOGtJrvGgeOK9J7+/y/4bPGhJmwNIsBc/IsaCpayFuL0v2gFT6Cc0AfXgXWCs8EA8KkBq6xYwH7MizYNczp1xpnxtj38DqYIbWZAM//vmjgxc0082s9810OusVKVgeefjyG6VNdY0Z4eHkePC29Cm7Tuku3+Z5usS4opioTYE6ay4sh3v08opuSHs+NaMuvZwH/uHg/ESzHfoSFxxR9B/wDY5quAS2pMH8bxMZbAaqL68DJodMDpVlhENlOBJVbwZzAQNUdTmzWeD0CrgCj3gA8G4wVDzUez+bBleAHOJclfBE0xnuBAaO5VajP4qYbfoJZ4JfkPZPzWkmX1db/Ec9Ca+pI5q5odsTNYG0Nnaln2hNQskPuA6+K9iyo321PAAAAAElFTkSuQmCC">
+                                    </image>
+                                </svg>Constructions
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="panelsStayOpen-headingThree">
+                            <div class="accordion-body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed nulla pariatur.
+                                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                    deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus
+                                    error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque
+                                    ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta
+                                    sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+                                    aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
+                                    nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                                    consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
+                                    labore et dolore magnam aliquam quaerat voluptatem.</p>
+                                <p>Main advanteges</p>
+                                <ul>
+                                    <li><svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="22"
+                                            viewBox="0 0 24 22">
+                                            <image id="tick-mark" width="24" height="22"
+                                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAWCAYAAADafVyIAAAABHNCSVQICAgIfAhkiAAAAjFJREFUSEutlU1IVkEUhj8NJMtFkBBiBUmZYCCuWhW2cNPCjbYI+hGUSN0GZRBlmyIRV+ZCIQg0MFoIRhoUJi5cFIiLaCEu/IvCjaiUkenzXs7IONx7/UgHHmbmzNzzzpx7ZiYnc/9bJqWUMFYN5XAE/sICfIER+JXw7WnslfA6J0HgEoOP4GKK+BpjvdAaCMn5KBTBjVAgD2MXNAaOf9CfB42fggIbH7dFbFrfOS+2fpMvkI/xLWj1KsvQAa9g2hPMpX0ebkMnTCY4b8be7Qv0Y7hqk4epr8NSsJOkbrjyyLkmO4ErtAfs60HqWtjYq3MnoC1/hbOwCGWwYs7PUf8OQuTrJq7cTdIOFPOPZrhF3WNtxXkI1qEqRmRX524H7TTumKNC6lUTeED92NrKfV8kK+dO4D0NHaZP5sQPwT06TwIRdUfBpaL7oQr1GVD+z8CsE1CaVUAfXPO9WzsUkTl0LpsEdPgOwl14lq2A5umDp4H4diqa/QD1HxNSyHWGojRNC5Hvs4nOczOEzmU+DnM2fpP6pRNI+skx0cpIRCU6REGpp//CbAr5lBNIStM4gTTbGIMXQHfWSYjuJ4Uo7aBlK1LDRN0AKg/Bpfe+XRUTOD0KP6EUdFFGZa+Xnd4L3WHHzN9l6nf+tv/nulY6KtYtUOc5i8usHTvQ3LQHR9fFITgBhz3HCkcDvPFXHhcifzybJ1PvsXK9Db7HOQ//Qdyc8NH/xySl4Wf4AO5aT/Kf2QJG4qDmBv7hdgAAAABJRU5ErkJggg==" />
+                                        </svg>
+                                        Lorem ipsum dolor sit amet, consectetur</li>
+                                    <li><svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="22"
+                                            viewBox="0 0 24 22">
+                                            <image id="tick-mark" width="24" height="22"
+                                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAWCAYAAADafVyIAAAABHNCSVQICAgIfAhkiAAAAjFJREFUSEutlU1IVkEUhj8NJMtFkBBiBUmZYCCuWhW2cNPCjbYI+hGUSN0GZRBlmyIRV+ZCIQg0MFoIRhoUJi5cFIiLaCEu/IvCjaiUkenzXs7IONx7/UgHHmbmzNzzzpx7ZiYnc/9bJqWUMFYN5XAE/sICfIER+JXw7WnslfA6J0HgEoOP4GKK+BpjvdAaCMn5KBTBjVAgD2MXNAaOf9CfB42fggIbH7dFbFrfOS+2fpMvkI/xLWj1KsvQAa9g2hPMpX0ebkMnTCY4b8be7Qv0Y7hqk4epr8NSsJOkbrjyyLkmO4ErtAfs60HqWtjYq3MnoC1/hbOwCGWwYs7PUf8OQuTrJq7cTdIOFPOPZrhF3WNtxXkI1qEqRmRX524H7TTumKNC6lUTeED92NrKfV8kK+dO4D0NHaZP5sQPwT06TwIRdUfBpaL7oQr1GVD+z8CsE1CaVUAfXPO9WzsUkTl0LpsEdPgOwl14lq2A5umDp4H4diqa/QD1HxNSyHWGojRNC5Hvs4nOczOEzmU+DnM2fpP6pRNI+skx0cpIRCU6REGpp//CbAr5lBNIStM4gTTbGIMXQHfWSYjuJ4Uo7aBlK1LDRN0AKg/Bpfe+XRUTOD0KP6EUdFFGZa+Xnd4L3WHHzN9l6nf+tv/nulY6KtYtUOc5i8usHTvQ3LQHR9fFITgBhz3HCkcDvPFXHhcifzybJ1PvsXK9Db7HOQ//Qdyc8NH/xySl4Wf4AO5aT/Kf2QJG4qDmBv7hdgAAAABJRU5ErkJggg==" />
+                                        </svg>
+                                        Lorem ipsum dolor sit amet, consectetur</li>
+                                    <li><svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="22"
+                                            viewBox="0 0 24 22">
+                                            <image id="tick-mark" width="24" height="22"
+                                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAWCAYAAADafVyIAAAABHNCSVQICAgIfAhkiAAAAjFJREFUSEutlU1IVkEUhj8NJMtFkBBiBUmZYCCuWhW2cNPCjbYI+hGUSN0GZRBlmyIRV+ZCIQg0MFoIRhoUJi5cFIiLaCEu/IvCjaiUkenzXs7IONx7/UgHHmbmzNzzzpx7ZiYnc/9bJqWUMFYN5XAE/sICfIER+JXw7WnslfA6J0HgEoOP4GKK+BpjvdAaCMn5KBTBjVAgD2MXNAaOf9CfB42fggIbH7dFbFrfOS+2fpMvkI/xLWj1KsvQAa9g2hPMpX0ebkMnTCY4b8be7Qv0Y7hqk4epr8NSsJOkbrjyyLkmO4ErtAfs60HqWtjYq3MnoC1/hbOwCGWwYs7PUf8OQuTrJq7cTdIOFPOPZrhF3WNtxXkI1qEqRmRX524H7TTumKNC6lUTeED92NrKfV8kK+dO4D0NHaZP5sQPwT06TwIRdUfBpaL7oQr1GVD+z8CsE1CaVUAfXPO9WzsUkTl0LpsEdPgOwl14lq2A5umDp4H4diqa/QD1HxNSyHWGojRNC5Hvs4nOczOEzmU+DnM2fpP6pRNI+skx0cpIRCU6REGpp//CbAr5lBNIStM4gTTbGIMXQHfWSYjuJ4Uo7aBlK1LDRN0AKg/Bpfe+XRUTOD0KP6EUdFFGZa+Xnd4L3WHHzN9l6nf+tv/nulY6KtYtUOc5i8usHTvQ3LQHR9fFITgBhz3HCkcDvPFXHhcifzybJ1PvsXK9Db7HOQ//Qdyc8NH/xySl4Wf4AO5aT/Kf2QJG4qDmBv7hdgAAAABJRU5ErkJggg==" />
+                                        </svg>
+                                        Lorem ipsum dolor sit amet, consectetur</li>
+                                    <li><svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="22"
+                                            viewBox="0 0 24 22">
+                                            <image id="tick-mark" width="24" height="22"
+                                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAWCAYAAADafVyIAAAABHNCSVQICAgIfAhkiAAAAjFJREFUSEutlU1IVkEUhj8NJMtFkBBiBUmZYCCuWhW2cNPCjbYI+hGUSN0GZRBlmyIRV+ZCIQg0MFoIRhoUJi5cFIiLaCEu/IvCjaiUkenzXs7IONx7/UgHHmbmzNzzzpx7ZiYnc/9bJqWUMFYN5XAE/sICfIER+JXw7WnslfA6J0HgEoOP4GKK+BpjvdAaCMn5KBTBjVAgD2MXNAaOf9CfB42fggIbH7dFbFrfOS+2fpMvkI/xLWj1KsvQAa9g2hPMpX0ebkMnTCY4b8be7Qv0Y7hqk4epr8NSsJOkbrjyyLkmO4ErtAfs60HqWtjYq3MnoC1/hbOwCGWwYs7PUf8OQuTrJq7cTdIOFPOPZrhF3WNtxXkI1qEqRmRX524H7TTumKNC6lUTeED92NrKfV8kK+dO4D0NHaZP5sQPwT06TwIRdUfBpaL7oQr1GVD+z8CsE1CaVUAfXPO9WzsUkTl0LpsEdPgOwl14lq2A5umDp4H4diqa/QD1HxNSyHWGojRNC5Hvs4nOczOEzmU+DnM2fpP6pRNI+skx0cpIRCU6REGpp//CbAr5lBNIStM4gTTbGIMXQHfWSYjuJ4Uo7aBlK1LDRN0AKg/Bpfe+XRUTOD0KP6EUdFFGZa+Xnd4L3WHHzN9l6nf+tv/nulY6KtYtUOc5i8usHTvQ3LQHR9fFITgBhz3HCkcDvPFXHhcifzybJ1PvsXK9Db7HOQ//Qdyc8NH/xySl4Wf4AO5aT/Kf2QJG4qDmBv7hdgAAAABJRU5ErkJggg==" />
+                                        </svg>
+                                        Lorem ipsum dolor sit amet, consectetur</li>
+                                </ul>
+                                <a href="#">Learn More ></a>
+                            </div>
+                        </div>
+                        <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
+                            aria-labelledby="panelsStayOpen-headingFour">
+                            <div class="accordion-body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed nulla pariatur.
+                                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                    deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus
+                                    error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque
+                                    ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta
+                                    sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+                                    aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
+                                    nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                                    consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
+                                    labore et dolore magnam aliquam quaerat voluptatem.</p>
+                                <p>Main advanteges</p>
+                                <ul>
+                                    <li><svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="22"
+                                            viewBox="0 0 24 22">
+                                            <image id="tick-mark" width="24" height="22"
+                                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAWCAYAAADafVyIAAAABHNCSVQICAgIfAhkiAAAAjFJREFUSEutlU1IVkEUhj8NJMtFkBBiBUmZYCCuWhW2cNPCjbYI+hGUSN0GZRBlmyIRV+ZCIQg0MFoIRhoUJi5cFIiLaCEu/IvCjaiUkenzXs7IONx7/UgHHmbmzNzzzpx7ZiYnc/9bJqWUMFYN5XAE/sICfIER+JXw7WnslfA6J0HgEoOP4GKK+BpjvdAaCMn5KBTBjVAgD2MXNAaOf9CfB42fggIbH7dFbFrfOS+2fpMvkI/xLWj1KsvQAa9g2hPMpX0ebkMnTCY4b8be7Qv0Y7hqk4epr8NSsJOkbrjyyLkmO4ErtAfs60HqWtjYq3MnoC1/hbOwCGWwYs7PUf8OQuTrJq7cTdIOFPOPZrhF3WNtxXkI1qEqRmRX524H7TTumKNC6lUTeED92NrKfV8kK+dO4D0NHaZP5sQPwT06TwIRdUfBpaL7oQr1GVD+z8CsE1CaVUAfXPO9WzsUkTl0LpsEdPgOwl14lq2A5umDp4H4diqa/QD1HxNSyHWGojRNC5Hvs4nOczOEzmU+DnM2fpP6pRNI+skx0cpIRCU6REGpp//CbAr5lBNIStM4gTTbGIMXQHfWSYjuJ4Uo7aBlK1LDRN0AKg/Bpfe+XRUTOD0KP6EUdFFGZa+Xnd4L3WHHzN9l6nf+tv/nulY6KtYtUOc5i8usHTvQ3LQHR9fFITgBhz3HCkcDvPFXHhcifzybJ1PvsXK9Db7HOQ//Qdyc8NH/xySl4Wf4AO5aT/Kf2QJG4qDmBv7hdgAAAABJRU5ErkJggg==" />
+                                        </svg>
+                                        Lorem ipsum dolor sit amet, consectetur</li>
+                                    <li><svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="22"
+                                            viewBox="0 0 24 22">
+                                            <image id="tick-mark" width="24" height="22"
+                                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAWCAYAAADafVyIAAAABHNCSVQICAgIfAhkiAAAAjFJREFUSEutlU1IVkEUhj8NJMtFkBBiBUmZYCCuWhW2cNPCjbYI+hGUSN0GZRBlmyIRV+ZCIQg0MFoIRhoUJi5cFIiLaCEu/IvCjaiUkenzXs7IONx7/UgHHmbmzNzzzpx7ZiYnc/9bJqWUMFYN5XAE/sICfIER+JXw7WnslfA6J0HgEoOP4GKK+BpjvdAaCMn5KBTBjVAgD2MXNAaOf9CfB42fggIbH7dFbFrfOS+2fpMvkI/xLWj1KsvQAa9g2hPMpX0ebkMnTCY4b8be7Qv0Y7hqk4epr8NSsJOkbrjyyLkmO4ErtAfs60HqWtjYq3MnoC1/hbOwCGWwYs7PUf8OQuTrJq7cTdIOFPOPZrhF3WNtxXkI1qEqRmRX524H7TTumKNC6lUTeED92NrKfV8kK+dO4D0NHaZP5sQPwT06TwIRdUfBpaL7oQr1GVD+z8CsE1CaVUAfXPO9WzsUkTl0LpsEdPgOwl14lq2A5umDp4H4diqa/QD1HxNSyHWGojRNC5Hvs4nOczOEzmU+DnM2fpP6pRNI+skx0cpIRCU6REGpp//CbAr5lBNIStM4gTTbGIMXQHfWSYjuJ4Uo7aBlK1LDRN0AKg/Bpfe+XRUTOD0KP6EUdFFGZa+Xnd4L3WHHzN9l6nf+tv/nulY6KtYtUOc5i8usHTvQ3LQHR9fFITgBhz3HCkcDvPFXHhcifzybJ1PvsXK9Db7HOQ//Qdyc8NH/xySl4Wf4AO5aT/Kf2QJG4qDmBv7hdgAAAABJRU5ErkJggg==" />
+                                        </svg>
+                                        Lorem ipsum dolor sit amet, consectetur</li>
+                                    <li><svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="22"
+                                            viewBox="0 0 24 22">
+                                            <image id="tick-mark" width="24" height="22"
+                                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAWCAYAAADafVyIAAAABHNCSVQICAgIfAhkiAAAAjFJREFUSEutlU1IVkEUhj8NJMtFkBBiBUmZYCCuWhW2cNPCjbYI+hGUSN0GZRBlmyIRV+ZCIQg0MFoIRhoUJi5cFIiLaCEu/IvCjaiUkenzXs7IONx7/UgHHmbmzNzzzpx7ZiYnc/9bJqWUMFYN5XAE/sICfIER+JXw7WnslfA6J0HgEoOP4GKK+BpjvdAaCMn5KBTBjVAgD2MXNAaOf9CfB42fggIbH7dFbFrfOS+2fpMvkI/xLWj1KsvQAa9g2hPMpX0ebkMnTCY4b8be7Qv0Y7hqk4epr8NSsJOkbrjyyLkmO4ErtAfs60HqWtjYq3MnoC1/hbOwCGWwYs7PUf8OQuTrJq7cTdIOFPOPZrhF3WNtxXkI1qEqRmRX524H7TTumKNC6lUTeED92NrKfV8kK+dO4D0NHaZP5sQPwT06TwIRdUfBpaL7oQr1GVD+z8CsE1CaVUAfXPO9WzsUkTl0LpsEdPgOwl14lq2A5umDp4H4diqa/QD1HxNSyHWGojRNC5Hvs4nOczOEzmU+DnM2fpP6pRNI+skx0cpIRCU6REGpp//CbAr5lBNIStM4gTTbGIMXQHfWSYjuJ4Uo7aBlK1LDRN0AKg/Bpfe+XRUTOD0KP6EUdFFGZa+Xnd4L3WHHzN9l6nf+tv/nulY6KtYtUOc5i8usHTvQ3LQHR9fFITgBhz3HCkcDvPFXHhcifzybJ1PvsXK9Db7HOQ//Qdyc8NH/xySl4Wf4AO5aT/Kf2QJG4qDmBv7hdgAAAABJRU5ErkJggg==" />
+                                        </svg>
+                                        Lorem ipsum dolor sit amet, consectetur</li>
+                                    <li><svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="22"
+                                            viewBox="0 0 24 22">
+                                            <image id="tick-mark" width="24" height="22"
+                                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAWCAYAAADafVyIAAAABHNCSVQICAgIfAhkiAAAAjFJREFUSEutlU1IVkEUhj8NJMtFkBBiBUmZYCCuWhW2cNPCjbYI+hGUSN0GZRBlmyIRV+ZCIQg0MFoIRhoUJi5cFIiLaCEu/IvCjaiUkenzXs7IONx7/UgHHmbmzNzzzpx7ZiYnc/9bJqWUMFYN5XAE/sICfIER+JXw7WnslfA6J0HgEoOP4GKK+BpjvdAaCMn5KBTBjVAgD2MXNAaOf9CfB42fggIbH7dFbFrfOS+2fpMvkI/xLWj1KsvQAa9g2hPMpX0ebkMnTCY4b8be7Qv0Y7hqk4epr8NSsJOkbrjyyLkmO4ErtAfs60HqWtjYq3MnoC1/hbOwCGWwYs7PUf8OQuTrJq7cTdIOFPOPZrhF3WNtxXkI1qEqRmRX524H7TTumKNC6lUTeED92NrKfV8kK+dO4D0NHaZP5sQPwT06TwIRdUfBpaL7oQr1GVD+z8CsE1CaVUAfXPO9WzsUkTl0LpsEdPgOwl14lq2A5umDp4H4diqa/QD1HxNSyHWGojRNC5Hvs4nOczOEzmU+DnM2fpP6pRNI+skx0cpIRCU6REGpp//CbAr5lBNIStM4gTTbGIMXQHfWSYjuJ4Uo7aBlK1LDRN0AKg/Bpfe+XRUTOD0KP6EUdFFGZa+Xnd4L3WHHzN9l6nf+tv/nulY6KtYtUOc5i8usHTvQ3LQHR9fFITgBhz3HCkcDvPFXHhcifzybJ1PvsXK9Db7HOQ//Qdyc8NH/xySl4Wf4AO5aT/Kf2QJG4qDmBv7hdgAAAABJRU5ErkJggg==" />
+                                        </svg>
+                                        Lorem ipsum dolor sit amet, consectetur</li>
+                                </ul>
+                                <a href="#">Learn More ></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+    <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Clamp.js/0.5.1/clamp.min.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
