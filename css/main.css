@@ -17,6 +17,11 @@
   src: url("/Resources/motiva-sans/MotivaSansMedium.woff.ttf");
   font-weight: 500;
 }
+@font-face {
+  font-family: MotivaSansLight;
+  src: url("/Resources/motiva-sans/MotivaSansLight.woff.ttf");
+  font-weight: 300;
+}
 html,
 body {
   width: 100%;
@@ -232,9 +237,9 @@ nav .navbar-toggler {
   left: 0;
   background-color: #d6f0ff;
   transform: skewY(4deg);
-  -webkit-transform: skewY(4deg);
-  -moz-transform: skewY(4deg);
-  -ms-transform: skewY(4deg);
+  -webkit-transform: skewY(4.5deg);
+  -moz-transform: skewY(4.5deg);
+  -ms-transform: skewY(4.5deg);
   z-index: -1;
 }
 .calls_queue::before {
@@ -251,13 +256,17 @@ nav .navbar-toggler {
 .service {
   background-color: #f2f2f2;
   margin-top: 1.5rem;
+  padding-bottom: 4.5rem;
 }
 .service_header {
   padding-top: 2rem;
+  padding-bottom: 1rem;
   text-align: center;
 }
 .service_header h3 {
   font-family: MotivaSansExtraBold;
+  margin-bottom: 2rem;
+  font-size: 2rem;
 }
 .service_header h3 span {
   display: block;
@@ -267,6 +276,162 @@ nav .navbar-toggler {
   margin-bottom: 1rem;
   text-align: center;
   letter-spacing: -0.4px;
+}
+.service_info h3 {
+  font-family: MotivaSansExtraBold;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+.service_info h3 span {
+  color: #007ad8;
+}
+.service_info p {
+  text-align: center;
+  letter-spacing: -0.4px;
+}
+.service .accordion .accordion-item {
+  margin-bottom: 1.25rem;
+  background-color: white;
+  color: #000000;
+}
+.service .accordion .accordion-item .accordion-button {
+  background-color: white;
+  color: #000000;
+  font-size: 1.75rem;
+}
+.service .accordion .accordion-item .accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+.service .accordion .accordion-item .accordion-button svg {
+  margin-right: 1rem;
+}
+.service .accordion .accordion-item .advantages {
+  font-size: 19.33px;
+  font-family: MotivaSansBold;
+}
+.service .accordion .accordion-item ul {
+  padding-left: 0;
+}
+.service .accordion .accordion-item ul li {
+  list-style: none;
+  font-family: MotivaSansLight;
+  margin-bottom: 1rem;
+}
+.service .accordion .accordion-item a {
+  color: #007ad8;
+  font-family: MotivaSansMedium;
+  font-size: 1.25rem;
+  text-align: right;
+  display: block;
+}
+
+.help-info {
+  padding-left: 0;
+  padding-right: 0;
+}
+.help-info_header {
+  background-color: #0a473d;
+  padding-bottom: 2.5rem;
+  padding-top: 1.35rem;
+  width: 100%;
+  position: relative;
+}
+.help-info_header h2 {
+  color: white;
+  font-family: MotivaSansExtraBold;
+  text-align: center;
+  font-size: 2.5rem;
+}
+.help-info .arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 24px groove transparent;
+  border-right: 24px solid transparent;
+  border-top: 16px solid #0a473d;
+}
+.help-info_options {
+  background-color: #cef7dc;
+  padding-top: 2rem;
+  margin-top: -1rem;
+}
+.help-info_options_item {
+  background-color: white;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1215686275);
+  border-radius: 9px;
+  max-width: 426px;
+  padding: 18px 1.5rem 14px;
+  margin-bottom: 56px;
+}
+.help-info_options_item img {
+  height: 110.25px;
+}
+.help-info_options_item_title {
+  font-family: MotivaSansBold;
+  letter-spacing: -0.8px;
+  margin-bottom: 6px;
+  margin-top: 0.5rem;
+}
+.help-info_options_item_text {
+  font-size: 1rem;
+  letter-spacing: -0.32px;
+  margin-bottom: 20px;
+}
+.help-info_options_item button {
+  background-color: #ff8a65;
+  color: white;
+  padding: 5px 46px;
+}
+.help-info_additional {
+  background-color: #0a473d;
+  padding: 22px 30px 23px;
+  color: white;
+}
+.help-info_additional h3 {
+  font-family: MotivaSansExtraBold;
+  font-size: 2rem;
+}
+.help-info_additional p {
+  font-size: 18px;
+  letter-spacing: -0.36px;
+  margin-bottom: 35px;
+  margin-top: 4px;
+}
+.help-info_additional button {
+  background-color: #ff8a65;
+  color: white;
+  padding: 5px 46px;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  padding: 48px 62px 32px;
+}
+footer .footer-logo {
+  margin-bottom: 21px;
+}
+footer .footer-logo img {
+  max-width: 245px;
+}
+footer .pricing {
+  margin-bottom: 6px;
+}
+footer .pricing p {
+  font-size: 1rem;
+}
+footer .country-info {
+  letter-spacing: -0.32px;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+footer .copyright {
+  color: #8e8e8e;
+  letter-spacing: -0.28px;
+  font-size: 14px;
+}
+footer .row {
+  width: 446px;
 }
 
 .centered-col {

@@ -20,6 +20,11 @@
   src: url("/Resources/motiva-sans/MotivaSansMedium.woff.ttf");
   font-weight: 500;
 }
+@font-face {
+  font-family: MotivaSansLight;
+  src: url("/Resources/motiva-sans/MotivaSansLight.woff.ttf");
+  font-weight: 300;
+}
 
 @mixin breakpoint($num) {
   @media (min-width: $num) {
@@ -247,9 +252,9 @@ nav {
       left: 0;
       background-color: #d6f0ff;
       transform: skewY(4deg);
-      -webkit-transform: skewY(4deg);
-      -moz-transform: skewY(4deg);
-      -ms-transform: skewY(4deg);
+      -webkit-transform: skewY(4.5deg);
+      -moz-transform: skewY(4.5deg);
+      -ms-transform: skewY(4.5deg);
       z-index: -1;
     }
 
@@ -269,11 +274,15 @@ nav {
 .service {
   background-color: #f2f2f2;
   margin-top: 1.5rem;
+  padding-bottom: 4.5rem;
   &_header {
     padding-top: 2rem;
+    padding-bottom: 1rem;
     text-align: center;
     h3 {
       font-family: MotivaSansExtraBold;
+      margin-bottom: 2rem;
+      font-size: 2rem;
       span {
         display: block;
         color: $main-lighter-blue;
@@ -286,8 +295,170 @@ nav {
       letter-spacing: -0.4px;
     }
   }
+  &_info {
+    h3 {
+      font-family: MotivaSansExtraBold;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      span {
+        color: $main-light-blue;
+      }
+    }
+    p {
+      text-align: center;
+      letter-spacing: -0.4px;
+    }
+  }
+  .accordion {
+    .accordion-item {
+      margin-bottom: 1.25rem;
+      background-color: white;
+      color: $black;
+      .accordion-button {
+        background-color: white;
+        color: $black;
+        font-size: 1.75rem;
+        &:not(.collapsed)::after {
+          background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+        }
+        svg {
+          margin-right: 1rem;
+        }
+      }
+      .advantages {
+        font-size: 19.33px;
+        font-family: MotivaSansBold;
+      }
+      ul {
+        padding-left: 0;
+        li {
+          list-style: none;
+          font-family: MotivaSansLight;
+          margin-bottom: 1rem;
+        }
+      }
+      a {
+        color: #007ad8;
+        font-family: MotivaSansMedium;
+        font-size: 1.25rem;
+        text-align: right;
+        display: block;
+      }
+    }
+  }
 }
 
+// HELP INFO SECTION
+
+.help-info {
+  padding-left: 0;
+  padding-right: 0;
+  &_header {
+    background-color: $main-green;
+    padding-bottom: 2.5rem;
+    padding-top: 1.35rem;
+    width: 100%;
+    position: relative;
+    h2 {
+      color: white;
+      font-family: MotivaSansExtraBold;
+      text-align: center;
+      font-size: 2.5rem;
+    }
+  }
+  .arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 24px groove transparent;
+    border-right: 24px solid transparent;
+    border-top: 16px solid $main-green;
+  }
+  &_options {
+    background-color: $secondary-lolive;
+    padding-top: 2rem;
+    margin-top: -1rem;
+    &_item {
+      background-color: white;
+      box-shadow: 0px 8px 15px #0000001f;
+      border-radius: 9px;
+      max-width: 426px;
+      padding: 18px 1.5rem 14px;
+      margin-bottom: 56px;
+      img {
+        height: 110.25px;
+      }
+      &_title {
+        font-family: MotivaSansBold;
+        letter-spacing: -0.8px;
+        margin-bottom: 6px;
+        margin-top: 0.5rem;
+      }
+      &_text {
+        font-size: 1rem;
+        letter-spacing: -0.32px;
+        margin-bottom: 20px;
+      }
+      button {
+        background-color: $main-orange;
+        color: white;
+        padding: 5px 46px;
+      }
+    }
+  }
+  &_additional {
+    background-color: $main-green;
+    padding: 22px 30px 23px;
+    color: white;
+    h3 {
+      font-family: MotivaSansExtraBold;
+      font-size: 2rem;
+    }
+    p {
+      font-size: 18px;
+      letter-spacing: -0.36px;
+      margin-bottom: 35px;
+      margin-top: 4px;
+    }
+    button {
+      background-color: $main-orange;
+      color: white;
+      padding: 5px 46px;
+    }
+  }
+}
+
+footer {
+  background-color: black;
+  color: white;
+  padding: 48px 62px 32px;
+  .footer-logo {
+    margin-bottom: 21px;
+    img {
+      max-width: 245px;
+    }
+  }
+  .pricing {
+    margin-bottom: 6px;
+    p {
+      font-size: 1rem;
+    }
+  }
+  .country-info {
+    letter-spacing: -0.32px;
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  .copyright {
+    color: #8e8e8e;
+    letter-spacing: -0.28px;
+    font-size: 14px;
+  }
+
+  .row {
+    width: 446px;
+  }
+}
 .centered-col {
   display: flex;
   flex-direction: column;
