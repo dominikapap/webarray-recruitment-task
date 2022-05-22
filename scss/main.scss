@@ -1,47 +1,8 @@
 @use "colors" as *;
+@use "fonts" as *;
+@use "mixins" as *;
 
-@font-face {
-  font-family: MotivaSans;
-  src: url("/Resources/motiva-sans/MotivaSansRegular.woff.ttf");
-}
-
-@font-face {
-  font-family: MotivaSansBold;
-  src: url("/Resources/motiva-sans/MotivaSansBold.woff.ttf");
-  font-weight: 700;
-}
-@font-face {
-  font-family: MotivaSansExtraBold;
-  src: url("/Resources/motiva-sans/MotivaSansExtraBold.ttf");
-  font-weight: 800;
-}
-@font-face {
-  font-family: MotivaSansMedium;
-  src: url("/Resources/motiva-sans/MotivaSansMedium.woff.ttf");
-  font-weight: 500;
-}
-@font-face {
-  font-family: MotivaSansLight;
-  src: url("/Resources/motiva-sans/MotivaSansLight.woff.ttf");
-  font-weight: 300;
-}
-
-@mixin breakpoint($num) {
-  @media (min-width: $num) {
-    @content;
-  }
-}
-@mixin max-breakpoint($num) {
-  @media (max-width: $num) {
-    @content;
-  }
-}
-@mixin big-mobile {
-  @media (min-width: 560px) {
-    @content;
-  }
-}
-
+//GENERAL OPTIONS ANC CLASSES
 html,
 body {
   width: 100%;
@@ -63,12 +24,22 @@ section {
 
 h2 {
   font-size: 2rem;
+  @include lg-screen {
+    font-size: 4rem;
+  }
 }
 h3 {
   font-size: 1.75rem;
 }
 p {
   font-size: 1.25rem;
+  @include lg-screen {
+    font-size: 1.5rem;
+  }
+}
+
+img {
+  max-width: 80%;
 }
 
 .btn {
@@ -77,14 +48,49 @@ p {
   font-family: MotivaSansMedium;
   padding: 10px 77px;
   margin-bottom: 20px;
+  margin-right: 1rem;
   &:hover {
     transform: scale(1.1);
+  }
+  @include lg-screen {
+    font-family: MotivaSans;
+    font-size: 2rem;
+    padding: 9px 53px;
   }
 }
 .btn-border {
   border: solid 2px;
+  @include lg-screen {
+    border: none;
+  }
 }
 
+.centered-col-lg-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include lg-screen {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+.centered-col-xl-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include xl-screen {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.centered-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+//NAVBAR
 nav {
   background: $main-gradient2;
   #phoneIcon {
@@ -92,48 +98,153 @@ nav {
   }
   .navbar-brand {
     margin-right: 0;
+    margin-left: auto;
     max-width: 50%;
   }
   .navbar-toggler {
-    color: $white;
-    padding-left: 0;
+    color: $white-smoke;
+    margin-left: auto;
+  }
+  .navbar-nav {
+    align-items: baseline;
+    .nav-item {
+      font-size: 24px;
+      font-family: MotivaSansMedium;
+
+      a {
+        color: #232649;
+        font-size: 24px;
+        letter-spacing: -0.48px;
+      }
+      #getQuoteBtn {
+        color: white;
+        background-color: $main-pink;
+        font-family: MotivaSans;
+        padding: 8px 39px;
+        font-size: 28px;
+        letter-spacing: -0.56px;
+      }
+    }
   }
 }
-.secondNav {
+.underNav {
   background: $main-gradient3;
   height: 30px;
-}
+  text-align: center;
+  font-size: 1rem;
 
-#prMsg {
+  @include lg-screen {
+    text-align: right;
+    height: 50px;
+    font-size: 1.5rem;
+
+    p {
+      padding: 10px 26px;
+    }
+  }
+}
+.carousel-control-next {
+  margin-right: -8%;
+}
+.carousel-control-prev {
+  margin-left: -8%;
+}
+//MARKETING MESSAGE SECTION
+.marketing-msg {
   background: $main-gradient;
-  color: $white;
-  h1 {
-    font-size: 2.5rem;
-    letter-spacing: -0.8px;
-    padding: 4.25rem 1.88rem;
-    span {
-      display: block;
-      font-family: MotivaSansExtraBold;
+  color: $white-smoke;
+  position: relative;
+  overflow: hidden;
+  @include lg-screen {
+    min-height: 60%;
+  }
+  &-header {
+    z-index: 0;
+
+    h1 {
+      font-size: 2.5rem;
+      letter-spacing: -0.8px;
+      padding: 4.25rem 1.88rem;
+      position: relative;
+      z-index: 3;
+      @include lg-screen {
+        font-family: MotivaSansExtraBold;
+        font-size: 4rem;
+        max-width: 75%;
+        text-align: left;
+        padding-left: 0;
+        line-height: 1;
+        margin-top: 40px;
+      }
+      @include xl-screen {
+        font-size: 4.5rem;
+        max-width: 80%;
+      }
+      @include breakpoint(1600px) {
+        font-size: 5rem;
+      }
+      span {
+        display: block;
+        font-family: MotivaSansExtraBold;
+        @include lg-screen {
+          display: inline-block;
+        }
+      }
+    }
+    &-img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
     }
   }
 
-  .start-btns {
-    padding-bottom: 72px;
-    #btnStartOne {
+  &-btns {
+    padding-bottom: 52px;
+    @include lg-screen {
+      justify-content: left;
+      margin-left: -2rem;
+      padding-bottom: 1rem;
+      align-items: normal;
+      @include xl-screen {
+        padding-bottom: 4.5rem;
+      }
+      button {
+        border-radius: 8px;
+        max-width: 300px;
+      }
+    }
+    button:first-child {
       background-color: $black;
-      color: $white;
+      color: $white-smoke;
+      @include lg-screen {
+        margin-left: 1.88rem;
+      }
     }
   }
 }
+.icons-bg {
+  padding-top: 2rem;
+  background-image: url("/Resources/icons-bg.png");
+  background-repeat: repeat;
+  width: 100%;
+  height: 134px;
+  margin-top: 42px;
+}
 
+//PRODUCT DESCRIPTION SECTION
 .product-description {
   margin-bottom: 30px;
-  &_header {
+
+  &-header {
     text-align: center;
     margin-top: 60px;
+    @include lg-screen {
+      text-align: left;
+      display: inline-block;
+    }
 
     h2 {
-      font-size: 32px;
       font-family: MotivaSansExtraBold;
       span {
         display: block;
@@ -141,9 +252,14 @@ nav {
       }
     }
     p {
-      font-size: 20px;
       margin-top: 1.5rem;
       margin-bottom: 1.7rem;
+    }
+  }
+  &-img {
+    @include lg-screen {
+      display: inline-block;
+      margin-top: 60px;
     }
     img {
       display: block;
@@ -152,96 +268,190 @@ nav {
       width: 100%;
     }
   }
-  .pd-btns {
+  &-btns {
     margin-top: 2.5rem;
     margin-bottom: 60px;
-    #pd-btn-one {
-      background-color: $main-pink;
-      color: $white;
+    button {
+      @include lg-screen {
+        padding: 8px 24px;
+        letter-spacing: -0.56px;
+        font-size: 28px;
+      }
     }
-    #pd-btn-two {
+    button:first-child {
+      background-color: $main-pink;
+      color: $white-smoke;
+      border: none;
+    }
+    button:nth-child(2) {
       color: $main-pink;
       border-color: $main-pink;
     }
   }
 
-  &_items {
+  &-items {
     .item {
-      margin-left: 45px;
-      margin-right: 45px;
-      overflow: hidden;
+      padding: 0 60px 45px;
+      @include md-screen {
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+      @include lg-screen {
+        padding: 0 20px;
+      }
+      &:nth-child(even) h3 > svg {
+        @include md-screen {
+          filter: invert(34%) sepia(81%) saturate(840%) hue-rotate(276deg)
+            brightness(91%) contrast(86%);
+        }
+      }
+
       h3 {
-        font-size: 20px;
+        font-size: 1.25rem;
         font-family: MotivaSansBold;
         margin-bottom: 0;
         @include big-mobile {
-          font-size: 28px;
+          font-size: 1.75rem;
         }
-        svg#Icon_kopia_10 {
-          width: 30 !important;
+        @include lg-screen {
+          font-size: 2rem;
+        }
+        span {
+          @include lg-screen() {
+            display: inline-block;
+            margin: 2rem auto 1.25rem;
+          }
         }
       }
       p {
-        font-size: 16px;
+        font-size: 1rem;
         letter-spacing: -0.4px;
         @include big-mobile {
-          font-size: 20px;
+          font-size: 1.25rem;
+        }
+        @include lg-screen {
+          font-size: 1.5rem;
+          line-height: 1;
         }
       }
     }
   }
 }
 
+//CALLS SECTION
 .calls {
   padding-left: 0;
   padding-right: 0;
   padding-bottom: 30px;
-  &_header {
+  &-header {
     font-family: MotivaSansExtraBold;
     position: relative;
     background-color: $main-light-blue;
     padding: 48px 30px 62px 48px;
     text-align: right;
+    @include lg-screen {
+      padding-right: 0;
+    }
+    @include xl-screen {
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      padding-left: min(20%);
+      @include breakpoint(465px) {
+        font-size: 2rem;
+      }
+      @include lg-screen {
+        font-size: 4rem;
+        text-align: center;
+      }
+      & > span {
+        display: block;
+        color: $white-smoke;
+      }
+    }
 
     img {
-      height: 251px;
+      max-height: 125%;
       position: absolute;
       left: 0;
       top: -0.75rem;
-      background: transparent;
-    }
-    span {
-      display: block;
-      color: $white;
     }
   }
-  &_btn {
+  &-btn {
     padding-top: 20px;
     padding-bottom: 36px;
     background-color: #d6f0ff;
     .btn {
       background-color: $main-light-blue;
-      color: $white;
+      color: $white-smoke;
       width: 426px;
+      max-width: 74%;
+      font-size: 1rem;
     }
   }
-  &_queue {
+  &-lg-btns {
+    font-size: 1.75rem;
+    margin-top: 2rem;
+
+    @include xl-screen {
+      margin-right: -15%;
+      align-items: center;
+    }
+    button:nth-child(even) {
+      background-color: white;
+    }
+    button:nth-child(odd) {
+      color: white;
+    }
+  }
+  &-queue {
     background-color: #d6f0ff;
     position: relative;
+    @include breakpoint(650px) {
+      padding-top: 200px;
+      margin-top: -200px;
+      z-index: -1;
+    }
+    @include lg-screen {
+      padding-top: 300px;
+      margin-top: -200px;
+      z-index: -1;
+    }
     p {
       line-height: 4rem;
       max-height: 24rem;
-      overflow: hidden;
       svg {
         margin-right: 0.75rem;
         margin-left: 1rem;
+        @include lg-screen {
+          margin-right: 1rem;
+          margin-left: 1.5rem;
+        }
       }
     }
-    .features-p {
+    &-p {
+      overflow: hidden;
+    }
+    &-features {
       text-align: center;
       color: $main-light-blue;
       font-family: MotivaSansMedium;
       font-size: 1.25rem;
+      top: 10%;
+      left: 0;
+      position: relative;
+      overflow: visible;
+
+      button {
+        background-color: $main-light-blue;
+        color: white;
+        border-radius: 8px;
+        margin-bottom: -6rem;
+        z-index: 100;
+        position: relative;
+      }
     }
     &::after {
       content: "";
@@ -251,11 +461,18 @@ nav {
       right: 0;
       left: 0;
       background-color: #d6f0ff;
-      transform: skewY(4deg);
-      -webkit-transform: skewY(4.5deg);
-      -moz-transform: skewY(4.5deg);
-      -ms-transform: skewY(4.5deg);
+      transform: skewY(3deg);
+      -webkit-transform: skewY(3deg);
+      -moz-transform: skewY(3deg);
+      -ms-transform: skewY(3deg);
       z-index: -1;
+      @include breakpoint(650px) {
+        bottom: -30px;
+      }
+      @include lg-screen {
+        height: 300px;
+        bottom: -10px;
+      }
     }
 
     &::before {
@@ -265,17 +482,28 @@ nav {
       bottom: -80px;
       right: 0;
       left: 0;
-      background-color: #f2f2f2;
+      background-color: $white-smoke;
       z-index: -1;
+      @include lg-screen {
+        background-color: white;
+      }
     }
   }
 }
 
+//SERVICE SECTION
 .service {
-  background-color: #f2f2f2;
+  background-color: $white-smoke;
   margin-top: 1.5rem;
-  padding-bottom: 4.5rem;
-  &_header {
+  padding: 0 0 4.5rem;
+  overflow: hidden;
+  @include lg-screen {
+    padding-bottom: 0;
+  }
+  @include lg-screen {
+    background-color: white;
+  }
+  &-header {
     padding-top: 2rem;
     padding-bottom: 1rem;
     text-align: center;
@@ -283,6 +511,12 @@ nav {
       font-family: MotivaSansExtraBold;
       margin-bottom: 2rem;
       font-size: 2rem;
+      @include md-screen {
+        font-size: 3rem;
+      }
+      @include breakpoint(1300px) {
+        font-size: 4rem;
+      }
       span {
         display: block;
         color: $main-lighter-blue;
@@ -293,39 +527,161 @@ nav {
       margin-bottom: 1rem;
       text-align: center;
       letter-spacing: -0.4px;
+      @include md-screen {
+        font-size: 1.25rem;
+      }
+      @include breakpoint(1300px) {
+        text-align: right;
+        font-size: 1.5rem;
+        letter-spacing: -0.48px;
+        padding-left: 12%;
+        padding-right: 10%;
+      }
     }
   }
-  &_info {
+  &-img {
+    img {
+      max-width: 80%;
+      @include lg-screen {
+        max-width: 100%;
+      }
+    }
+  }
+  &-info {
+    padding-left: min(30px);
+    padding-right: min(30px);
     h3 {
       font-family: MotivaSansExtraBold;
       text-align: center;
       margin-bottom: 1.5rem;
       font-size: 2rem;
-      span {
+      @include md-screen {
+        font-size: 3rem;
+      }
+      @include xl-screen {
+        font-size: 4rem;
+        text-align: left;
+
+        span {
+          display: block;
+        }
+        span:nth-child(odd) {
+          color: $main-light-blue;
+        }
+      }
+      span:last-child {
         color: $main-light-blue;
       }
     }
     p {
       text-align: center;
       letter-spacing: -0.4px;
+      @include md-screen {
+        font-size: 1.25rem;
+      }
+    }
+  }
+  .construction-btn {
+    font-size: 18px;
+    border-radius: 38px;
+    border: 1px solid #808080;
+    padding: 15px;
+    margin-bottom: 30px;
+    background-color: white;
+    position: relative;
+    z-index: 2;
+    @include xl-screen {
+      padding: 27px 20px 15px;
+    }
+    span {
+      padding-top: 0.5rem;
+    }
+  }
+  .constructions-info {
+    position: relative;
+    z-index: 1;
+    @include xl-screen {
+      margin-top: -8rem;
+    }
+    &-img {
+      position: absolute;
+      z-index: -1;
+      max-width: 95%;
+    }
+    &-header {
+      font-size: 2.5rem;
+      font-family: MotivaSansExtraBold;
+      text-align: center;
+      margin-top: 5rem;
+      @include xl-screen {
+        font-size: 46px;
+      }
+      span {
+        color: $main-light-blue;
+      }
+    }
+    &-text {
+      font-size: 1.25rem;
+      padding: 20px 40px;
+      margin-bottom: 0;
+      @include xl-screen {
+        padding-top: 40px;
+        font-size: 1.5rem;
+      }
+    }
+    .advantages {
+      font-size: 24px;
+      font-family: MotivaSansExtraBold;
+      padding-left: 40px;
+    }
+    @include xl-screen {
+      font-size: 30px;
+    }
+    ul {
+      li {
+        list-style: none;
+        font-size: 20px;
+        max-width: 80%;
+        line-height: 1.25;
+        margin-left: 1rem;
+        svg {
+          margin-top: 1rem;
+        }
+        @include xl-screen {
+          font-size: 24px;
+          max-width: 60%;
+        }
+      }
+    }
+    .btn {
+      background-color: $main-light-blue;
+      color: #ffffff;
+      font-size: 24px;
+      margin-left: 40px;
+      padding-left: 19px;
+      padding-right: 19px;
+      word-wrap: no-wrap;
+      @include xl-screen {
+        font-size: 28px;
+      }
+    }
+
+    .construction-img {
+      position: absolute;
+      bottom: 0;
+      right: -12%;
+      display: none;
+      @include xl-screen {
+        display: block;
+      }
     }
   }
   .accordion {
-    .accordion-item {
+    &-item {
       margin-bottom: 1.25rem;
       background-color: white;
       color: $black;
-      .accordion-button {
-        background-color: white;
-        color: $black;
-        font-size: 1.75rem;
-        &:not(.collapsed)::after {
-          background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-        }
-        svg {
-          margin-right: 1rem;
-        }
-      }
+
       .advantages {
         font-size: 19.33px;
         font-family: MotivaSansBold;
@@ -335,7 +691,11 @@ nav {
         li {
           list-style: none;
           font-family: MotivaSansLight;
+          font-size: 1.25rem;
           margin-bottom: 1rem;
+          svg {
+            margin-top: 1rem;
+          }
         }
       }
       a {
@@ -346,6 +706,17 @@ nav {
         display: block;
       }
     }
+    &-button {
+      background-color: white;
+      color: $black;
+      font-size: 1.75rem;
+      &:not(.collapsed)::after {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+      }
+      svg {
+        margin-right: 1rem;
+      }
+    }
   }
 }
 
@@ -354,7 +725,7 @@ nav {
 .help-info {
   padding-left: 0;
   padding-right: 0;
-  &_header {
+  &-header {
     background-color: $main-green;
     padding-bottom: 2.5rem;
     padding-top: 1.35rem;
@@ -365,110 +736,209 @@ nav {
       font-family: MotivaSansExtraBold;
       text-align: center;
       font-size: 2.5rem;
+      @include md-screen {
+        font-size: 3.5rem;
+      }
+      @include lg-screen {
+        font-size: 5rem;
+      }
     }
   }
   .arrow-down {
     width: 0;
     height: 0;
-    border-left: 24px groove transparent;
+    border-left: 24px solid transparent;
     border-right: 24px solid transparent;
     border-top: 16px solid $main-green;
+    @include md-screen {
+      border-left: 32px solid transparent;
+      border-right: 32px solid transparent;
+      border-top: 24px solid $main-green;
+    }
   }
-  &_options {
-    background-color: $secondary-lolive;
-    padding-top: 2rem;
-    margin-top: -1rem;
-    &_item {
+  &-options {
+    background-color: $secondary-olive;
+    padding-top: 2.5rem;
+    margin-top: -1.5rem;
+    &-item {
       background-color: white;
       box-shadow: 0px 8px 15px #0000001f;
       border-radius: 9px;
-      max-width: 426px;
+      max-width: 75%;
       padding: 18px 1.5rem 14px;
       margin-bottom: 56px;
+      @include big-mobile {
+        max-width: 426px;
+      }
+      @include lg-screen {
+        max-width: 300px;
+        margin-right: 15px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+      @include xl-screen {
+        max-width: 350px;
+        margin-right: 30px;
+      }
       img {
         height: 110.25px;
+        @include lg-screen {
+          height: 141px;
+          margin-top: 34px;
+          margin-bottom: 17px;
+        }
       }
-      &_title {
+      &-title {
         font-family: MotivaSansBold;
         letter-spacing: -0.8px;
         margin-bottom: 6px;
         margin-top: 0.5rem;
+        @include md-screen {
+          font-size: 2rem;
+          letter-spacing: -1.28px;
+        }
       }
-      &_text {
+      &-text {
         font-size: 1rem;
         letter-spacing: -0.32px;
         margin-bottom: 20px;
+        text-align: center;
+        @include md-screen {
+          font-size: 1.5rem;
+          letter-spacing: -0.48px;
+        }
       }
       button {
         background-color: $main-orange;
         color: white;
         padding: 5px 46px;
+        font-size: 1rem;
+        @include big-mobile {
+          font-size: 1.25rem;
+        }
+        @include md-screen {
+          font-size: 1.5rem;
+          padding: 6px 20px;
+          margin-right: 0;
+        }
+        @include xl-screen {
+          font-size: 1.75rem;
+        }
       }
     }
   }
-  &_additional {
+  &-additional {
     background-color: $main-green;
     padding: 22px 30px 23px;
     color: white;
+    @include lg-screen {
+      padding-top: 94px;
+      padding-bottom: 78px;
+    }
     h3 {
       font-family: MotivaSansExtraBold;
       font-size: 2rem;
+      @include lg-screen {
+        font-size: 3rem;
+      }
+      @include xl-screen {
+        font-size: 4rem;
+      }
     }
     p {
       font-size: 18px;
       letter-spacing: -0.36px;
       margin-bottom: 35px;
       margin-top: 4px;
+      @include lg-screen {
+        font-size: 1.75rem;
+      }
+      @include xl-screen {
+        font-size: 2rem;
+      }
     }
     button {
       background-color: $main-orange;
       color: white;
       padding: 5px 46px;
+      @include lg-screen {
+        font-size: 20px;
+      }
+      @include xl-screen {
+        font-size: 28px;
+      }
     }
   }
 }
+
+//FOOTER
 
 footer {
   background-color: black;
   color: white;
   padding: 48px 62px 32px;
+  @include lg-screen {
+    padding-top: 35px;
+    padding-bottom: 13px;
+  }
   .footer-logo {
     margin-bottom: 21px;
     img {
       max-width: 245px;
+      @include xl-screen {
+        max-width: 350px;
+      }
     }
   }
   .pricing {
     margin-bottom: 6px;
+    max-width: 75%;
     p {
       font-size: 1rem;
+      text-align: center;
     }
-  }
-  .country-info {
-    letter-spacing: -0.32px;
-    font-size: 16px;
-    margin-bottom: 12px;
-  }
-  .copyright {
-    color: #8e8e8e;
-    letter-spacing: -0.28px;
-    font-size: 14px;
+    #pricing-lg {
+      p {
+        white-space: nowrap;
+        font-size: 18px;
+        font-family: MotivaSansBold;
+        padding-left: 1rem;
+        margin-bottom: 0.5rem;
+        @include xl-screen {
+          font-size: 24px;
+        }
+      }
+      #star {
+        margin-bottom: 10px;
+      }
+    }
+    .country-info {
+      letter-spacing: -0.32px;
+      margin-bottom: 12px;
+    }
+    .copyright {
+      color: #8e8e8e;
+      letter-spacing: -0.28px;
+      font-size: 14px;
+      @include lg-screen {
+        color: #ffffff;
+      }
+    }
+
+    .copyright,
+    .country-info {
+      @include lg-screen {
+        font-size: 18px;
+        text-align: center;
+      }
+    }
   }
 
   .row {
-    width: 446px;
+    max-width: 446px;
+    @include lg-screen {
+      max-width: fit-content;
+    }
   }
 }
-.centered-col {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-/*.truncate {
-  display: -webkit-box;
-  -webkit-line-clamp: 5;
-  -webkit-box-orient: vertical;
-  word-break: var(--word-break, "none");
-  overflow: hidden;
-  hyphens: none;
-}*/
