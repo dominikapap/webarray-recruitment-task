@@ -76,8 +76,10 @@ img {
   margin-bottom: 20px;
   margin-right: 1rem;
 }
-.btn:hover {
-  transform: scale(1.1);
+@media (hover: hover) and (pointer: fine) {
+  .btn {
+    transform: scale(1.1);
+  }
 }
 @media (min-width: 991px) {
   .btn {
